@@ -1,3 +1,6 @@
+import 'package:ergoweb/pages/courses.dart';
+import 'package:ergoweb/pages/ergo_change.dart';
+import 'package:ergoweb/pages/stayhome.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ergoweb/pages/about.dart';
@@ -34,9 +37,18 @@ class Navbar extends StatelessWidget {
                     text: 'Home',
                     nextPage: HomePage(),
                   ),
-                  NavbarItem(text: 'Bleib zuhause und gesund'),
-                  NavbarItem(text: 'Ergotherapie im Wandel'),
-                  NavbarItem(text: 'Kurse'),
+                  NavbarItem(
+                    text: 'Bleib zuhause und gesund',
+                    nextPage: StayHomePage(),
+                  ),
+                  NavbarItem(
+                    text: 'Ergotherapie im Wandel',
+                    nextPage: ErgoChangePage(),
+                  ),
+                  NavbarItem(
+                    text: 'Kurse',
+                    nextPage: CoursesPage(),
+                  ),
                   NavbarItem(
                     text: 'Über uns',
                     nextPage: AboutPage(),

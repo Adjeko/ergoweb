@@ -6,14 +6,7 @@ import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
 import 'package:ergoweb/widgets/blocks/footer.dart';
 import 'package:ergoweb/widgets/blocks/sidebyside.dart';
 
-class AboutPage extends StatefulWidget {
-  AboutPage({Key key}) : super(key: key);
-
-  @override
-  _AboutPageState createState() => _AboutPageState();
-}
-
-class _AboutPageState extends State<AboutPage> {
+class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
