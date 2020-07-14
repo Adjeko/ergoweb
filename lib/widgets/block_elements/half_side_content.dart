@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
 
 class HalfSideContent extends StatelessWidget {
-  final TitleTextButton ttb;
+  final Widget content;
   final Color backgroundColor;
 
   const HalfSideContent({
     Key key,
-    this.ttb,
+    this.content,
     this.backgroundColor,
   }) : super(key: key);
 
@@ -22,7 +22,7 @@ class HalfSideContent extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50.0),
-            child: ttb,
+            child: content,
           ),
         ),
       ),

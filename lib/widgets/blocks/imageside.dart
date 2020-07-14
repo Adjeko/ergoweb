@@ -25,7 +25,7 @@ class ImageSide extends StatelessWidget {
     );
 
     Widget _content = HalfSideContent(
-      ttb: ttb,
+      content: ttb,
       backgroundColor: contentBackgroundColor,
     );
 

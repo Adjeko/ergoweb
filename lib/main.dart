@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/pages/about.dart';
 import 'package:ergoweb/pages/home.dart';
 import 'package:ergoweb/pages/contact.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ContactPage(),
+      home: AboutPage(),
     );
   }
 }
