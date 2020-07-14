@@ -30,7 +30,6 @@ jobs:
     # Enabling Flutter Web
     - run: flutter config --enable-web
     
-    - run: cd /home/runner/work/ergoWeb/ergoWeb/
     # Get the latst dependencies
     - run: flutter pub get
       
