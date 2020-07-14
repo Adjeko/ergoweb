@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
-
 class HalfSideContent extends StatelessWidget {
   final Widget content;
   final Color backgroundColor;

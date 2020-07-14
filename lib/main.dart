@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:ergoweb/pages/about.dart';
-import 'package:ergoweb/pages/home.dart';
-import 'package:ergoweb/pages/contact.dart';
 
 void main() {
   runApp(MyApp());

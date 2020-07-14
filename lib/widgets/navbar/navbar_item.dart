@@ -1,4 +1,3 @@
-import 'package:ergoweb/main.dart';
 import 'package:flutter/material.dart';
 
 class NavbarItem extends StatelessWidget {
