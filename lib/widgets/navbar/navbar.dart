@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/pages/contact.dart';
+import 'package:ergoweb/pages/home.dart';
 import 'package:ergoweb/widgets/Navbar/navbar_item.dart';
 import 'package:ergoweb/widgets/Navbar/navbar_logo.dart';
 
@@ -27,12 +29,18 @@ class Navbar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  NavbarItem(text: 'Home'),
+                  NavbarItem(
+                    text: 'Home',
+                    nextPage: HomePage(),
+                  ),
                   NavbarItem(text: 'Bleib zuhause und gesund'),
                   NavbarItem(text: 'Ergotherapie im Wandel'),
                   NavbarItem(text: 'Kurse'),
                   NavbarItem(text: 'Über uns'),
-                  NavbarItem(text: 'Kontakt'),
+                  NavbarItem(
+                    text: 'Kontakt',
+                    nextPage: ContactPage(),
+                  ),
                 ],
               ),
             ),

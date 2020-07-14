@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:ergoweb/widgets/Navbar/navbar.dart';
 import 'package:ergoweb/pages/home.dart';
+import 'package:ergoweb/pages/contact.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,25 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyStartPage(title: 'Ergo-Unterwegs'),
-    );
-  }
-}
-
-class MyStartPage extends StatelessWidget {
-  final String title;
-
-  const MyStartPage({Key key, this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          HomePage(),
-          Navbar(),
-        ],
-      ),
+      home: ContactPage(),
     );
   }
 }
