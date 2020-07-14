@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 
 class TextBanner extends StatelessWidget {
+  final Widget content;
+  final Color backgroundColor;
+
   const TextBanner({
     Key key,
+    this.content,
+    this.backgroundColor,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromRGBO(44, 65, 104, 1.0),
+      color: backgroundColor,
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         // height: MediaQuery.of(context).size.height / 2,
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(25.0),
-            child: Text(
-              'Besucht uns und unser Poster auf dem Ergotherapie-Kongress 2020 Weimar',
-              style: TextStyle(color: Colors.white),
-            ),
+            child: content,
           ),
         ),
       ),

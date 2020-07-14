@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
+
 class ImageFull extends StatelessWidget {
   const ImageFull({
     Key key,
@@ -23,25 +25,18 @@ class ImageFull extends StatelessWidget {
               ),
             ),
             Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Gemeinsam auf dem Weg'),
-                  Text('Wir gestalten mit euch die Ergotherapie der Zukunft'),
-                  RaisedButton(
-                    color: Color.fromRGBO(44, 65, 104, 1.0),
-                    onPressed: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Text(
-                        'Mehr lesen',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ],
+              child: TitleTextButton(
+                title: Text('Gemeinsam auf dem Weg'),
+                text:
+                    Text('Wir gestalten mit euch die Ergotherapie der Zukunft'),
+                button: RaisedButton(
+                  color: Color.fromRGBO(44, 65, 104, 1.0),
+                  onPressed: () {},
+                  child:
+                      Text('Mehr lesen', style: TextStyle(color: Colors.white)),
+                ),
               ),
-            )
+            ),
           ],
         ));
   }
