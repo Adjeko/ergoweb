@@ -1,6 +1,6 @@
 import 'package:ergoweb/pages/courses.dart';
 import 'package:ergoweb/pages/ergo_change.dart';
-import 'package:ergoweb/pages/stayhome.dart';
+import 'package:ergoweb/pages/stay_home.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ergoweb/pages/about.dart';

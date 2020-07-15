@@ -16,11 +16,9 @@ class HalfSideContent extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 2,
       child: Container(
         color: backgroundColor,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 50.0),
-            child: content,
-          ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50.0),
+          child: content,
         ),
       ),
     );

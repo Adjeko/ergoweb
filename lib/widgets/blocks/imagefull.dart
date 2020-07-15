@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
 
@@ -23,21 +24,46 @@ class ImageFull extends StatelessWidget {
               ),
             ),
             Opacity(
-              opacity: 0.7,
+              opacity: 0.8,
               child: Container(
                 color: Colors.white,
               ),
             ),
             Center(
               child: TitleTextButton(
-                title: Text('Gemeinsam auf dem Weg'),
-                text:
-                    Text('Wir gestalten mit euch die Ergotherapie der Zukunft'),
-                button: RaisedButton(
-                  color: Color.fromRGBO(44, 65, 104, 1.0),
-                  onPressed: () {},
-                  child:
-                      Text('Mehr lesen', style: TextStyle(color: Colors.white)),
+                title: Text(
+                  'Gemeinsam auf dem Weg',
+                  style: GoogleFonts.getFont(
+                    'Playfair Display',
+                    textStyle: TextStyle(
+                      color: Color.fromRGBO(44, 65, 104, 1.0),
+                      fontSize: 64,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+                text: Text(
+                  'Wir gestalten mit euch die Ergotherapie der Zukunft',
+                  style: GoogleFonts.getFont(
+                    'Playfair Display',
+                    textStyle: TextStyle(
+                      color: Color.fromRGBO(44, 65, 104, 1.0),
+                      fontSize: 36,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+                button: Padding(
+                  padding: const EdgeInsets.only(top: 40.0),
+                  child: RaisedButton(
+                    color: Color.fromRGBO(44, 65, 104, 1.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                    onPressed: () {},
+                    child: Text('Mehr lesen',
+                        style: TextStyle(color: Colors.white)),
+                  ),
                 ),
               ),
             ),

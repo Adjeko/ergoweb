@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TitleTextButton extends StatelessWidget {
-  final Text title;
-  final Text text;
-  final RaisedButton button;
+  final Widget title;
+  final Widget text;
+  final Widget button;
 
   const TitleTextButton({
     Key key,
