@@ -1,3 +1,4 @@
+import 'package:ergoweb/pages/home.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ergoweb/pages/about.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: AboutPage(),
+      home: HomePage(),
     );
   }
 }

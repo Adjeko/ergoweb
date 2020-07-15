@@ -14,12 +14,16 @@ class ImageFull extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
-            Image.network(
-              'https://jimdo-storage.freetls.fastly.net/image/74253843/141bc384-d06e-4391-a28a-2bc45f52f216.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=1707',
-              width: MediaQuery.of(context).size.width,
+            Center(
+              child: Image.network(
+                'https://jimdo-storage.freetls.fastly.net/image/74253843/141bc384-d06e-4391-a28a-2bc45f52f216.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=1707',
+                fit: BoxFit.cover,
+                height: double.infinity,
+                width: double.infinity,
+              ),
             ),
             Opacity(
-              opacity: 0.5,
+              opacity: 0.7,
               child: Container(
                 color: Colors.white,
               ),

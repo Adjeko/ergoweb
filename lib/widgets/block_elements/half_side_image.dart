@@ -13,14 +13,11 @@ class HalfSideImage extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width / 2,
       height: MediaQuery.of(context).size.height,
-      child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.fitWidth,
-            alignment: FractionalOffset.center,
-            image: NetworkImage(imageUrl),
-          ),
-        ),
+      child: Image.network(
+        imageUrl,
+        fit: BoxFit.cover,
+        height: double.infinity,
+        width: double.infinity,
       ),
     );
   }
