@@ -1,13 +1,13 @@
-import 'package:ergoweb/pages/courses.dart';
-import 'package:ergoweb/pages/ergo_change.dart';
-import 'package:ergoweb/pages/stay_home.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ergoweb/pages/about.dart';
 import 'package:ergoweb/pages/contact.dart';
 import 'package:ergoweb/pages/home.dart';
-import 'package:ergoweb/widgets/Navbar/navbar_item.dart';
-import 'package:ergoweb/widgets/Navbar/navbar_logo.dart';
+import 'package:ergoweb/pages/courses.dart';
+import 'package:ergoweb/pages/ergo_change.dart';
+import 'package:ergoweb/pages/stay_home.dart';
+import 'package:ergoweb/widgets/navbar/navbar_item.dart';
+import 'package:ergoweb/widgets/navbar/navbar_logo.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({

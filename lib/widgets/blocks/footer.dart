@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ergoweb/widgets/Blocks/textbanner.dart';
+import 'package:ergoweb/widgets/blocks/textbanner.dart';
 
 class Footer extends StatelessWidget {
   const Footer({

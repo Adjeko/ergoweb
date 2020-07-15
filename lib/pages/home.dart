@@ -3,9 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:ergoweb/widgets/navbar/navbar.dart';
 import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
-import 'package:ergoweb/widgets/Blocks/imagefull.dart';
-import 'package:ergoweb/widgets/Blocks/imageside.dart';
-import 'package:ergoweb/widgets/Blocks/textbanner.dart';
+import 'package:ergoweb/widgets/blocks/imagefull.dart';
+import 'package:ergoweb/widgets/blocks/imageside.dart';
+import 'package:ergoweb/widgets/blocks/textbanner.dart';
 import 'package:ergoweb/widgets/blocks/footer.dart';
 
 class HomePage extends StatelessWidget {
