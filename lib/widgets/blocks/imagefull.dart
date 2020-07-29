@@ -35,17 +35,9 @@ class ImageFull extends StatelessWidget {
               child: TitleTextButton(
                 title: Texts.latoHeader(
                     'Gemeinsam auf dem Weg', ErgoColors.logoTextAccent),
-                text: Text(
-                  'Wir gestalten mit euch die Ergotherapie der Zukunft',
-                  style: GoogleFonts.getFont(
-                    'Playfair Display',
-                    textStyle: TextStyle(
-                      color: Color.fromRGBO(44, 65, 104, 1.0),
-                      fontSize: 36,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
+                text: Texts.latoSubheader(
+                    'Wir gestalten mit euch die Ergotherapie der Zukunft',
+                    ErgoColors.logoTextAccent),
                 button: Padding(
                   padding: const EdgeInsets.only(top: 40.0),
                   child: RaisedButton(
@@ -54,8 +46,7 @@ class ImageFull extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4.0),
                     ),
                     onPressed: () {},
-                    child: Text('Mehr lesen',
-                        style: TextStyle(color: Colors.white)),
+                    child: Texts.latoButtonText('Mehr lesen', Colors.white),
                   ),
                 ),
               ),

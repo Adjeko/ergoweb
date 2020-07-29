@@ -41,6 +41,18 @@ class Texts {
         ),
       );
 
+  static final latoButtonText = (String text, Color color) => AutoSizeText(
+        text,
+        style: GoogleFonts.getFont(
+          'Lato',
+          textStyle: TextStyle(
+            color: color,
+            fontSize: 18,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+      );
+
   static final bahnHeader = (Color color) => TextStyle(
         fontFamily: 'Bahnschrift',
         fontSize: 14,

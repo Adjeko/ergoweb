@@ -1,3 +1,5 @@
+import 'package:ergoweb/config/constants/colors.dart';
+import 'package:ergoweb/config/constants/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,45 +27,20 @@ class StayHomePage extends StatelessWidget {
                     children: [
                       Align(
                         alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Bleib zuhause und gesund',
-                          style: GoogleFonts.getFont(
-                            'Playfair Display',
-                            textStyle: TextStyle(
-                              color: Color.fromRGBO(44, 65, 104, 1.0),
-                              fontSize: 64,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        ),
+                        child: Texts.latoHeader('Bleib zuhause und gesund',
+                            ErgoColors.logoTextAccent),
                       ),
                       Align(
                         alignment: Alignment.centerLeft,
-                        child: Text(
-                          'In Balance mit Ergotherapie',
-                          style: GoogleFonts.getFont(
-                            'Playfair Display',
-                            textStyle: TextStyle(
-                              color: Color.fromRGBO(44, 65, 104, 1.0),
-                              fontSize: 36,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        ),
+                        child: Texts.latoSubheader(
+                            'In Balance mit Ergotherapie',
+                            ErgoColors.logoTextAccent),
                       ),
                     ],
                   ),
-                  text: Text(
-                    'In Quarantänezeiten sind Menschen aufgrund von Faktoren, die außerhalb ihrer Kontrolle liegen, von der Möglichkeit ausgeschlossen, an bedeutungsvollen Betätigungen teilzuhaben. Dies kann negative Auswirkungen auf dein Wohlbefinden und deine Gesundheit haben. Daher ist es gerade jetzt wichtig, eine Tagesstruktur zu schaffen und deine Betätigungen in Balance zu halten.\n\nHier kann dir Ergotherapie helfen!',
-                    style: GoogleFonts.getFont(
-                      'Mukta',
-                      textStyle: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  text: Texts.latoText(
+                      'In Quarantänezeiten sind Menschen aufgrund von Faktoren, die außerhalb ihrer Kontrolle liegen, von der Möglichkeit ausgeschlossen, an bedeutungsvollen Betätigungen teilzuhaben. Dies kann negative Auswirkungen auf dein Wohlbefinden und deine Gesundheit haben. Daher ist es gerade jetzt wichtig, eine Tagesstruktur zu schaffen und deine Betätigungen in Balance zu halten.\n\nHier kann dir Ergotherapie helfen!',
+                      Colors.black),
                   button: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.0),
@@ -72,8 +49,7 @@ class StayHomePage extends StatelessWidget {
                     onPressed: () {},
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
-                      child: Text('zum Flyer',
-                          style: TextStyle(color: Colors.white)),
+                      child: Texts.latoButtonText('zum Flyer', Colors.white),
                     ),
                   ),
                 ),
@@ -81,28 +57,10 @@ class StayHomePage extends StatelessWidget {
               TextBanner(
                 backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
                 content: TitleTextButton(
-                  title: Text(
-                    'Du hast Interesse an weiteren Angeboten? ',
-                    style: GoogleFonts.getFont(
-                      'Playfair Display',
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 36,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                  text: Text(
-                    'Dann schreib uns!',
-                    style: GoogleFonts.getFont(
-                      'Mukta',
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  title: Texts.latoSubheader(
+                      'Du hast Interesse an weiteren Angeboten? ',
+                      Colors.white),
+                  text: Texts.latoText('Dann schreib uns!', Colors.white),
                   button: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.0),
@@ -111,8 +69,7 @@ class StayHomePage extends StatelessWidget {
                     onPressed: () {},
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
-                      child: Text('Kontakt',
-                          style: TextStyle(color: Colors.black)),
+                      child: Texts.latoButtonText('Kontakt', Colors.black),
                     ),
                   ),
                 ),

@@ -1,3 +1,5 @@
+import 'package:ergoweb/config/constants/colors.dart';
+import 'package:ergoweb/config/constants/texts.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ergoweb/widgets/navbar/navbar.dart';
@@ -23,29 +25,13 @@ class AboutPage extends StatelessWidget {
                 ttb: TitleTextButton(
                   title: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Wege entstehen dadurch, dass man sie geht.',
-                      style: GoogleFonts.getFont(
-                        'Playfair Display',
-                        textStyle: TextStyle(
-                          color: Color.fromRGBO(44, 65, 104, 1.0),
-                          fontSize: 64,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ),
+                    child: Texts.latoHeader(
+                        'Wege entstehen dadurch, dass man sie geht.',
+                        ErgoColors.logoTextAccent),
                   ),
-                  text: Text(
-                    'Wir arbeiten beide in ambulanten  Ergotherapie- Praxen und haben selbst den Wandel zu modellgeleitetem Arbeiten gemeinsam im Team durchlaufen. Dabei entstand der Weg während wir ihn gegangen sind.\nDieser Prozess hat uns so gepackt, dass wir uns dann wissenschaftlich im Rahmen unseres Bachelorarbeit damit beschäftigt haben.\nSomit verbinden wir Theorie und Praxis miteinander. Dieses Wissen möchten wir gerne mit euch teilen! Machen wir uns gemeinsam auf den Weg!',
-                    style: GoogleFonts.getFont(
-                      'Mukta',
-                      textStyle: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  text: Texts.latoText(
+                      'Wir arbeiten beide in ambulanten  Ergotherapie- Praxen und haben selbst den Wandel zu modellgeleitetem Arbeiten gemeinsam im Team durchlaufen. Dabei entstand der Weg während wir ihn gegangen sind.\nDieser Prozess hat uns so gepackt, dass wir uns dann wissenschaftlich im Rahmen unseres Bachelorarbeit damit beschäftigt haben.\nSomit verbinden wir Theorie und Praxis miteinander. Dieses Wissen möchten wir gerne mit euch teilen! Machen wir uns gemeinsam auf den Weg!',
+                      Colors.black),
                   button: RaisedButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.0),
@@ -54,8 +40,7 @@ class AboutPage extends StatelessWidget {
                     onPressed: () {},
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
-                      child: Text('Mehr lesen',
-                          style: TextStyle(color: Colors.white)),
+                      child: Texts.latoButtonText('Mehr lesen', Colors.white),
                     ),
                   ),
                 ),

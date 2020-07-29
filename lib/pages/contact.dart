@@ -1,3 +1,5 @@
+import 'package:ergoweb/config/constants/colors.dart';
+import 'package:ergoweb/config/constants/texts.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ergoweb/widgets/navbar/navbar.dart';
@@ -20,9 +22,8 @@ class ContactPage extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 100.0),
-                      child: Text('Möchtet ihr mehr erfahren?',
-                          style: TextStyle(
-                              color: Color.fromRGBO(44, 65, 104, 1.0))),
+                      child: Texts.latoSubheader('Möchtet ihr mehr erfahren?',
+                          ErgoColors.logoTextAccent),
                     ),
                     Row(
                       children: [
@@ -65,20 +66,18 @@ class ContactPage extends StatelessWidget {
                       ],
                     ),
                     RaisedButton(
-                        color: Color.fromRGBO(44, 65, 104, 1.0),
-                        onPressed: () {},
-                        child: Text('Absenden',
-                            style: TextStyle(color: Colors.white))),
+                      color: Color.fromRGBO(44, 65, 104, 1.0),
+                      onPressed: () {},
+                      child: Texts.latoButtonText('Absenden', Colors.white),
+                    ),
                   ],
                 ),
               ),
               TextBanner(
                 backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
-                content: Text(
+                content: Texts.latoSubheader(
                     'Besucht uns und unser Poster auf dem Ergotherapie-Kongress 2020 in Weimar',
-                    style: TextStyle(
-                      color: Color.fromRGBO(44, 65, 104, 1.0),
-                    )),
+                    ErgoColors.logoTextAccent),
               ),
               Footer(),
             ],

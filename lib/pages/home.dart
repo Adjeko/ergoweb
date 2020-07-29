@@ -1,3 +1,4 @@
+import 'package:ergoweb/config/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -37,31 +38,13 @@ class HomePage extends StatelessWidget {
                 ttb: TitleTextButton(
                   title: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Kurse',
-                      style: GoogleFonts.getFont(
-                        'Playfair Display',
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: 64,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ),
+                    child: Texts.latoHeader('Kurse', Colors.white),
                   ),
                   text: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Wir bieten euch über unsere Onlinekurse einfache Werkzeuge, um in eurer Praxis betätigungsorientiert, klientenzentriert und evidenzbasiert zu arbeiten.\nMacht euch gemeinsam mit eurem Team auf den Weg!',
-                      style: GoogleFonts.getFont(
-                        'Mukta',
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
+                    child: Texts.latoText(
+                        'Wir bieten euch über unsere Onlinekurse einfache Werkzeuge, um in eurer Praxis betätigungsorientiert, klientenzentriert und evidenzbasiert zu arbeiten.\nMacht euch gemeinsam mit eurem Team auf den Weg!',
+                        Colors.white),
                   ),
                   button: Padding(
                     padding: const EdgeInsets.only(top: 35.0),
@@ -72,8 +55,7 @@ class HomePage extends StatelessWidget {
                       onPressed: () {},
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
-                        child: Text('Mehr lesen',
-                            style: TextStyle(color: Colors.black)),
+                        child: Texts.latoButtonText('Mehr lesen', Colors.black),
                       ),
                     ),
                   ),
@@ -87,29 +69,12 @@ class HomePage extends StatelessWidget {
                 ttb: TitleTextButton(
                   title: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Ergotherapie im Wandel',
-                      style: GoogleFonts.getFont(
-                        'Playfair Display',
-                        textStyle: TextStyle(
-                          color: Color.fromRGBO(44, 65, 104, 1.0),
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ),
+                    child: Texts.latoHeader(
+                        'Ergotherapie im Wandel', ErgoColors.logoTextAccent),
                   ),
-                  text: Text(
-                    'In einer Studienarbeit haben wir untersucht, wie Teams in ambulanten Praxen ihre Arbeitsweise erfolgreich umstellen können, um modellgeleitete und moderne Ergotherapie anzubieten.\nDu hast Interesse an der wissenschaftlichen Basis und was hinter unseren Lernangeboten steckt?\nHier findet ihr unser Poster und weitere Ressourcen, um Hinter die Kulissen von Ergo-Unterwegs zu schauen! ',
-                    style: GoogleFonts.getFont(
-                      'Mukta',
-                      textStyle: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  text: Texts.latoText(
+                      'In einer Studienarbeit haben wir untersucht, wie Teams in ambulanten Praxen ihre Arbeitsweise erfolgreich umstellen können, um modellgeleitete und moderne Ergotherapie anzubieten.\nDu hast Interesse an der wissenschaftlichen Basis und was hinter unseren Lernangeboten steckt?\nHier findet ihr unser Poster und weitere Ressourcen, um Hinter die Kulissen von Ergo-Unterwegs zu schauen! ',
+                      Colors.black),
                   button: Padding(
                     padding: const EdgeInsets.only(top: 35.0),
                     child: RaisedButton(
@@ -117,8 +82,7 @@ class HomePage extends StatelessWidget {
                       onPressed: () {},
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
-                        child: Text('Mehr lesen',
-                            style: TextStyle(color: Colors.white)),
+                        child: Texts.latoButtonText('Mehr lesen', Colors.white),
                       ),
                     ),
                   ),
@@ -132,29 +96,12 @@ class HomePage extends StatelessWidget {
                 ttb: TitleTextButton(
                   title: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Über uns',
-                      style: GoogleFonts.getFont(
-                        'Playfair Display',
-                        textStyle: TextStyle(
-                          color: Color.fromRGBO(44, 65, 104, 1.0),
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ),
+                    child:
+                        Texts.latoHeader('Über uns', ErgoColors.logoTextAccent),
                   ),
-                  text: Text(
-                    'Wir arbeiten beide in ambulanten  Ergotherapie- Praxen und haben selbst den Wandel zu modellgeleitetem Arbeiten gemeinsam im Team durchlaufen. Dabei entstand der Weg während wir ihn gegangen sind.\nDieser Prozess hat uns so gepackt, dass wir uns dann wissenschaftlich mit Lernerfahrungen im Team beschäftigt haben.\nSo verbinden wir Theorie und Praxis miteinander. Dieses Wissen möchten wir gerne mit euch teilen!\nMachen wir uns gemeinsam auf den Weg!',
-                    style: GoogleFonts.getFont(
-                      'Mukta',
-                      textStyle: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  text: Texts.latoText(
+                      'Wir arbeiten beide in ambulanten  Ergotherapie- Praxen und haben selbst den Wandel zu modellgeleitetem Arbeiten gemeinsam im Team durchlaufen. Dabei entstand der Weg während wir ihn gegangen sind.\nDieser Prozess hat uns so gepackt, dass wir uns dann wissenschaftlich mit Lernerfahrungen im Team beschäftigt haben.\nSo verbinden wir Theorie und Praxis miteinander. Dieses Wissen möchten wir gerne mit euch teilen!\nMachen wir uns gemeinsam auf den Weg!',
+                      Colors.black),
                   button: Padding(
                     padding: const EdgeInsets.only(top: 35.0),
                     child: RaisedButton(
@@ -163,8 +110,7 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(4.0),
                       ),
                       onPressed: () {},
-                      child: Text('Mehr lesen',
-                          style: TextStyle(color: Colors.white)),
+                      child: Texts.latoButtonText('Mehr lesen', Colors.white),
                     ),
                   ),
                 ),
@@ -172,32 +118,14 @@ class HomePage extends StatelessWidget {
               TextBanner(
                 backgroundColor: Colors.black,
                 content: TitleTextButton(
-                  title: Text(
-                    'Interessiert?!',
-                    style: GoogleFonts.getFont(
-                      'Playfair Display',
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                  text: Text(
-                    'Schreibt uns einfach über das Kontaktformular!\nWir freuen uns von euch zu hören!',
-                    style: GoogleFonts.getFont(
-                      'Mukta',
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  title: Texts.latoSubheader('Interessiert?!', Colors.white),
+                  text: Texts.latoText(
+                      'Schreibt uns einfach über das Kontaktformular!\nWir freuen uns von euch zu hören!',
+                      Colors.white),
                   button: RaisedButton(
                     color: Colors.white,
                     onPressed: () {},
-                    child: Text('Kontakt'),
+                    child: Texts.latoButtonText('Kontakt', Colors.black),
                   ),
                 ),
               ),
