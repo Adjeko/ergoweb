@@ -2,7 +2,6 @@ import 'package:ergoweb/config/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/widgets/navbar/navbar.dart';
