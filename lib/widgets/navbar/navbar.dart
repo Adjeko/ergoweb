@@ -9,18 +9,38 @@ import 'package:ergoweb/pages/stay_home.dart';
 import 'package:ergoweb/widgets/navbar/navbar_item.dart';
 import 'package:ergoweb/widgets/navbar/navbar_logo.dart';
 
-class Navbar extends StatelessWidget {
+class Navbar extends StatefulWidget {
+  final ScrollController scroll;
+
   const Navbar({
     Key key,
+    this.scroll,
   }) : super(key: key);
 
   @override
+  _NavbarState createState() => _NavbarState();
+}
+
+class _NavbarState extends State<Navbar> {
+  Color _backgroundColor = Colors.transparent;
+
+  @override
   Widget build(BuildContext context) {
+    widget.scroll.addListener(() {
+      this.setState(() {
+        if (widget.scroll.offset > 0) {
+          _backgroundColor = Colors.grey[300];
+        } else {
+          _backgroundColor = Colors.transparent;
+        }
+      });
+    });
+
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: 75,
       child: Container(
-        color: Colors.transparent,
+        color: _backgroundColor,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

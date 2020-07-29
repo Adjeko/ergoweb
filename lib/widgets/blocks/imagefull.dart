@@ -1,13 +1,21 @@
 import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
 
 class ImageFull extends StatelessWidget {
+  final String imageUrl;
+  final String title;
+  final String text;
+  final Widget buttons;
+
   const ImageFull({
     Key key,
+    this.imageUrl,
+    this.title,
+    this.text,
+    this.buttons,
   }) : super(key: key);
 
   @override
@@ -19,7 +27,7 @@ class ImageFull extends StatelessWidget {
           children: [
             Center(
               child: Image.network(
-                'https://jimdo-storage.freetls.fastly.net/image/74253843/141bc384-d06e-4391-a28a-2bc45f52f216.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=1707',
+                imageUrl,
                 fit: BoxFit.cover,
                 height: double.infinity,
                 width: double.infinity,
@@ -33,15 +41,12 @@ class ImageFull extends StatelessWidget {
             ),
             Center(
               child: TitleTextButton(
-                title: Texts.latoHeader(
-                    'Gemeinsam auf dem Weg', ErgoColors.logoTextAccent),
-                text: Texts.latoSubheader(
-                    'Wir gestalten mit euch die Ergotherapie der Zukunft',
-                    ErgoColors.logoTextAccent),
+                title: Texts.latoHeader(title, ErgoColors.logoTextAccent),
+                text: Texts.latoSubheader(text, ErgoColors.logoTextAccent),
                 button: Padding(
                   padding: const EdgeInsets.only(top: 40.0),
                   child: RaisedButton(
-                    color: Color.fromRGBO(44, 65, 104, 1.0),
+                    color: ErgoColors.logoTextAccent,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.0),
                     ),
