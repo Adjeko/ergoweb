@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^1.1.0
+  auto_size_text: ^2.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -75,3 +76,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Bahnschrift
+      fonts:
+        - asset: assets/fonts/bahnschrift_regular.ttf

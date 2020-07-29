@@ -1,3 +1,5 @@
+import 'package:ergoweb/config/constants/colors.dart';
+import 'package:ergoweb/config/constants/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,17 +33,8 @@ class ImageFull extends StatelessWidget {
             ),
             Center(
               child: TitleTextButton(
-                title: Text(
-                  'Gemeinsam auf dem Weg',
-                  style: GoogleFonts.getFont(
-                    'Playfair Display',
-                    textStyle: TextStyle(
-                      color: Color.fromRGBO(44, 65, 104, 1.0),
-                      fontSize: 64,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
+                title: Texts.latoHeader(
+                    'Gemeinsam auf dem Weg', ErgoColors.logoTextAccent),
                 text: Text(
                   'Wir gestalten mit euch die Ergotherapie der Zukunft',
                   style: GoogleFonts.getFont(

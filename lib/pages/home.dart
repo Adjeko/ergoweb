@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
+import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/widgets/navbar/navbar.dart';
 import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
 import 'package:ergoweb/widgets/blocks/imagefull.dart';
@@ -23,17 +25,9 @@ class HomePage extends StatelessWidget {
               ImageFull(),
               TextBanner(
                 backgroundColor: Color.fromRGBO(44, 65, 104, 1.0),
-                content: Text(
-                  'Besucht uns und unser Poster auf dem Ergotherapie-Kongress 2020 Weimar',
-                  style: GoogleFonts.getFont(
-                    'Playfair Display',
-                    textStyle: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
+                content: Texts.latoSubheader(
+                    'Besucht uns und unser Poster auf dem Ergotherapie-Kongress 2020 Weimar',
+                    Colors.white),
               ),
               ImageSide(
                 isImageRight: false,
