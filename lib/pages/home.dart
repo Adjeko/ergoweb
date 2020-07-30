@@ -1,3 +1,4 @@
+import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ergoweb/config/constants/colors.dart';
@@ -20,8 +21,8 @@ class HomePage extends StatelessWidget {
         ImageFull(
           imageUrl:
               'https://jimdo-storage.freetls.fastly.net/image/74253843/141bc384-d06e-4391-a28a-2bc45f52f216.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=1707',
-          title: 'Gemeinsam auf dem Weg',
-          text: 'Wir gestalten mit euch die Ergotherapie der Zukunft',
+          title: ErgoLocalizations.of(context).translate('first_string'),
+          text: ErgoLocalizations.of(context).translate('second_string'),
         ),
         TextBanner(
           backgroundColor: Color.fromRGBO(44, 65, 104, 1.0),
