@@ -1,9 +1,8 @@
-import 'package:ergoweb/config/constants/colors.dart';
-import 'package:ergoweb/config/constants/texts.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ergoweb/widgets/navbar/navbar.dart';
-import 'package:ergoweb/widgets/blocks/footer.dart';
+import 'package:ergoweb/config/constants/colors.dart';
+import 'package:ergoweb/config/constants/texts.dart';
+import 'package:ergoweb/pages/layouts/webpage.dart';
 import 'package:ergoweb/widgets/blocks/textbanner.dart';
 
 class ContactPage extends StatelessWidget {
@@ -11,80 +10,70 @@ class ContactPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          ListView(
+    return WebPage(
+      children: [
+        SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
             children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 100.0),
-                      child: Texts.latoSubheader('Möchtet ihr mehr erfahren?',
-                          ErgoColors.logoTextAccent),
-                    ),
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 20.0),
-                            child: TextField(
-                              decoration: InputDecoration(hintText: 'Name'),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 20.0),
-                            child: TextField(
-                              decoration: InputDecoration(hintText: 'Email'),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
+              Padding(
+                padding: const EdgeInsets.only(top: 100.0),
+                child: Texts.latoSubheader(
+                    'Möchtet ihr mehr erfahren?', ErgoColors.logoTextAccent),
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: TextField(
-                        decoration: InputDecoration(hintText: 'Nachricht'),
+                        decoration: InputDecoration(hintText: 'Name'),
                       ),
                     ),
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: false,
-                          onChanged: (value) {},
-                        ),
-                        Text(
-                            'Ich habe die Datenschutzerklärung zur Kenntnis genommen und erkläre mich damit einverstanden.'),
-                      ],
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: TextField(
+                        decoration: InputDecoration(hintText: 'Email'),
+                      ),
                     ),
-                    RaisedButton(
-                      color: Color.fromRGBO(44, 65, 104, 1.0),
-                      onPressed: () {},
-                      child: Texts.latoButtonText('Absenden', Colors.white),
-                    ),
-                  ],
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: TextField(
+                  decoration: InputDecoration(hintText: 'Nachricht'),
                 ),
               ),
-              TextBanner(
-                backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
-                content: Texts.latoSubheader(
-                    'Besucht uns und unser Poster auf dem Ergotherapie-Kongress 2020 in Weimar',
-                    ErgoColors.logoTextAccent),
+              Row(
+                children: [
+                  Checkbox(
+                    value: false,
+                    onChanged: (value) {},
+                  ),
+                  Text(
+                      'Ich habe die Datenschutzerklärung zur Kenntnis genommen und erkläre mich damit einverstanden.'),
+                ],
               ),
-              Footer(),
+              RaisedButton(
+                color: Color.fromRGBO(44, 65, 104, 1.0),
+                onPressed: () {},
+                child: Texts.latoButtonText('Absenden', Colors.white),
+              ),
             ],
           ),
-          Navbar(),
-        ],
-      ),
+        ),
+        TextBanner(
+          backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
+          content: Texts.latoSubheader(
+              'Besucht uns und unser Poster auf dem Ergotherapie-Kongress 2020 in Weimar',
+              ErgoColors.logoTextAccent),
+        ),
+      ],
     );
   }
 }
