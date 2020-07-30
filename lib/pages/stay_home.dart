@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/pages/layouts/webpage.dart';
@@ -23,17 +24,21 @@ class StayHomePage extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Texts.latoHeader(
-                      'Bleib zuhause und gesund', ErgoColors.logoTextAccent),
+                      ErgoLocalizations.of(context)
+                          .translate('stay_home_1_title'),
+                      ErgoColors.logoTextAccent),
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Texts.latoSubheader(
-                      'In Balance mit Ergotherapie', ErgoColors.logoTextAccent),
+                      ErgoLocalizations.of(context)
+                          .translate('stay_home_1_subtitle'),
+                      ErgoColors.logoTextAccent),
                 ),
               ],
             ),
             text: Texts.latoText(
-                'In Quarantänezeiten sind Menschen aufgrund von Faktoren, die außerhalb ihrer Kontrolle liegen, von der Möglichkeit ausgeschlossen, an bedeutungsvollen Betätigungen teilzuhaben. Dies kann negative Auswirkungen auf dein Wohlbefinden und deine Gesundheit haben. Daher ist es gerade jetzt wichtig, eine Tagesstruktur zu schaffen und deine Betätigungen in Balance zu halten.\n\nHier kann dir Ergotherapie helfen!',
+                ErgoLocalizations.of(context).translate('stay_home_1_text'),
                 Colors.black),
             button: RaisedButton(
               shape: RoundedRectangleBorder(
@@ -43,7 +48,10 @@ class StayHomePage extends StatelessWidget {
               onPressed: () {},
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Texts.latoButtonText('zum Flyer', Colors.white),
+                child: Texts.latoButtonText(
+                    ErgoLocalizations.of(context)
+                        .translate('stay_home_1_button'),
+                    Colors.white),
               ),
             ),
           ),
@@ -52,8 +60,11 @@ class StayHomePage extends StatelessWidget {
           backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
           content: TitleTextButton(
             title: Texts.latoSubheader(
-                'Du hast Interesse an weiteren Angeboten? ', Colors.white),
-            text: Texts.latoText('Dann schreib uns!', Colors.white),
+                ErgoLocalizations.of(context).translate('stay_home_2_title'),
+                Colors.white),
+            text: Texts.latoText(
+                ErgoLocalizations.of(context).translate('stay_home_2_text'),
+                Colors.white),
             button: RaisedButton(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4.0),
@@ -62,7 +73,10 @@ class StayHomePage extends StatelessWidget {
               onPressed: () {},
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Texts.latoButtonText('Kontakt', Colors.black),
+                child: Texts.latoButtonText(
+                    ErgoLocalizations.of(context)
+                        .translate('stay_home_2_button'),
+                    Colors.black),
               ),
             ),
           ),

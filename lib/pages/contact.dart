@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/pages/layouts/webpage.dart';
@@ -19,7 +20,8 @@ class ContactPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 100.0),
                 child: Texts.latoSubheader(
-                    'Möchtet ihr mehr erfahren?', ErgoColors.logoTextAccent),
+                    ErgoLocalizations.of(context).translate('contact_1_title'),
+                    ErgoColors.logoTextAccent),
               ),
               Row(
                 children: [
@@ -70,7 +72,7 @@ class ContactPage extends StatelessWidget {
         TextBanner(
           backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
           content: Texts.latoSubheader(
-              'Besucht uns und unser Poster auf dem Ergotherapie-Kongress 2020 in Weimar',
+              ErgoLocalizations.of(context).translate('contact_2_text'),
               ErgoColors.logoTextAccent),
         ),
       ],

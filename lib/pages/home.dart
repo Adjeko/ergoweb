@@ -21,13 +21,14 @@ class HomePage extends StatelessWidget {
         ImageFull(
           imageUrl:
               'https://jimdo-storage.freetls.fastly.net/image/74253843/141bc384-d06e-4391-a28a-2bc45f52f216.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=1707',
-          title: ErgoLocalizations.of(context).translate('first_string'),
-          text: ErgoLocalizations.of(context).translate('second_string'),
+          title: ErgoLocalizations.of(context).translate('home_1_title'),
+          text: ErgoLocalizations.of(context).translate('home_1_text'),
+          buttonText: ErgoLocalizations.of(context).translate('home_1_button'),
         ),
         TextBanner(
           backgroundColor: Color.fromRGBO(44, 65, 104, 1.0),
           content: Texts.latoSubheader(
-              'Besucht uns und unser Poster auf dem Ergotherapie-Kongress 2020 Weimar',
+              ErgoLocalizations.of(context).translate('home_2_text'),
               Colors.white),
         ),
         ImageSide(
@@ -38,12 +39,14 @@ class HomePage extends StatelessWidget {
           ttb: TitleTextButton(
             title: Align(
               alignment: Alignment.centerLeft,
-              child: Texts.latoHeader('Kurse', Colors.white),
+              child: Texts.latoHeader(
+                  ErgoLocalizations.of(context).translate('home_3_title'),
+                  Colors.white),
             ),
             text: Align(
               alignment: Alignment.centerLeft,
               child: Texts.latoText(
-                  'Wir bieten euch über unsere Onlinekurse einfache Werkzeuge, um in eurer Praxis betätigungsorientiert, klientenzentriert und evidenzbasiert zu arbeiten.\nMacht euch gemeinsam mit eurem Team auf den Weg!',
+                  ErgoLocalizations.of(context).translate('home_3_text'),
                   Colors.white),
             ),
             button: Padding(
@@ -55,7 +58,9 @@ class HomePage extends StatelessWidget {
                 onPressed: () {},
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Texts.latoButtonText('Mehr lesen', Colors.black),
+                  child: Texts.latoButtonText(
+                      ErgoLocalizations.of(context).translate('home_3_button'),
+                      Colors.black),
                 ),
               ),
             ),
@@ -70,10 +75,11 @@ class HomePage extends StatelessWidget {
             title: Align(
               alignment: Alignment.centerLeft,
               child: Texts.latoHeader(
-                  'Ergotherapie im Wandel', ErgoColors.logoTextAccent),
+                  ErgoLocalizations.of(context).translate('home_4_title'),
+                  ErgoColors.logoTextAccent),
             ),
             text: Texts.latoText(
-                'In einer Studienarbeit haben wir untersucht, wie Teams in ambulanten Praxen ihre Arbeitsweise erfolgreich umstellen können, um modellgeleitete und moderne Ergotherapie anzubieten.\nDu hast Interesse an der wissenschaftlichen Basis und was hinter unseren Lernangeboten steckt?\nHier findet ihr unser Poster und weitere Ressourcen, um Hinter die Kulissen von Ergo-Unterwegs zu schauen! ',
+                ErgoLocalizations.of(context).translate('home_4_text'),
                 Colors.black),
             button: Padding(
               padding: const EdgeInsets.only(top: 35.0),
@@ -82,7 +88,9 @@ class HomePage extends StatelessWidget {
                 onPressed: () {},
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Texts.latoButtonText('Mehr lesen', Colors.white),
+                  child: Texts.latoButtonText(
+                      ErgoLocalizations.of(context).translate('home_4_button'),
+                      Colors.white),
                 ),
               ),
             ),
@@ -96,10 +104,12 @@ class HomePage extends StatelessWidget {
           ttb: TitleTextButton(
             title: Align(
               alignment: Alignment.centerLeft,
-              child: Texts.latoHeader('Über uns', ErgoColors.logoTextAccent),
+              child: Texts.latoHeader(
+                  ErgoLocalizations.of(context).translate('home_5_title'),
+                  ErgoColors.logoTextAccent),
             ),
             text: Texts.latoText(
-                'Wir arbeiten beide in ambulanten  Ergotherapie- Praxen und haben selbst den Wandel zu modellgeleitetem Arbeiten gemeinsam im Team durchlaufen. Dabei entstand der Weg während wir ihn gegangen sind.\nDieser Prozess hat uns so gepackt, dass wir uns dann wissenschaftlich mit Lernerfahrungen im Team beschäftigt haben.\nSo verbinden wir Theorie und Praxis miteinander. Dieses Wissen möchten wir gerne mit euch teilen!\nMachen wir uns gemeinsam auf den Weg!',
+                ErgoLocalizations.of(context).translate('home_5_text'),
                 Colors.black),
             button: Padding(
               padding: const EdgeInsets.only(top: 35.0),
@@ -109,7 +119,9 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4.0),
                 ),
                 onPressed: () {},
-                child: Texts.latoButtonText('Mehr lesen', Colors.white),
+                child: Texts.latoButtonText(
+                    ErgoLocalizations.of(context).translate('home_5_button'),
+                    Colors.white),
               ),
             ),
           ),
@@ -117,14 +129,18 @@ class HomePage extends StatelessWidget {
         TextBanner(
           backgroundColor: Colors.black,
           content: TitleTextButton(
-            title: Texts.latoSubheader('Interessiert?!', Colors.white),
+            title: Texts.latoSubheader(
+                ErgoLocalizations.of(context).translate('home_6_title'),
+                Colors.white),
             text: Texts.latoText(
-                'Schreibt uns einfach über das Kontaktformular!\nWir freuen uns von euch zu hören!',
+                ErgoLocalizations.of(context).translate('home_6_text'),
                 Colors.white),
             button: RaisedButton(
               color: Colors.white,
               onPressed: () {},
-              child: Texts.latoButtonText('Kontakt', Colors.black),
+              child: Texts.latoButtonText(
+                  ErgoLocalizations.of(context).translate('home_6_button'),
+                  Colors.black),
             ),
           ),
         ),

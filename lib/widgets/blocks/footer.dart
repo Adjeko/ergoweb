@@ -1,6 +1,7 @@
-import 'package:ergoweb/config/constants/texts.dart';
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/config/constants/texts.dart';
+import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/widgets/blocks/textbanner.dart';
 
 class Footer extends StatelessWidget {
@@ -18,15 +19,21 @@ class Footer extends StatelessWidget {
           children: [
             FlatButton(
               onPressed: () {},
-              child: Texts.latoButtonText('Impressum', Colors.white),
+              child: Texts.latoButtonText(
+                  ErgoLocalizations.of(context).translate('impressum'),
+                  Colors.white),
             ),
             FlatButton(
               onPressed: () {},
-              child: Texts.latoButtonText('Datenschutz', Colors.white),
+              child: Texts.latoButtonText(
+                  ErgoLocalizations.of(context).translate('datenschutz'),
+                  Colors.white),
             ),
             FlatButton(
               onPressed: () {},
-              child: Texts.latoButtonText('Cookie-Einstellungen', Colors.white),
+              child: Texts.latoButtonText(
+                  ErgoLocalizations.of(context).translate('cookie'),
+                  Colors.white),
             ),
           ],
         ),

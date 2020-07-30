@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/pages/layouts/webpage.dart';
@@ -19,14 +20,18 @@ class ErgoChangePage extends StatelessWidget {
               'https://jimdo-storage.freetls.fastly.net/image/87118133/98c0d631-1450-4dd7-a3fa-07b492a4802d.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=694&height=800&trim=32,0,180,0',
           ttb: TitleTextButton(
             title: Texts.latoHeader(
-                'Ergotherapie im Wandel', ErgoColors.logoTextAccent),
+                ErgoLocalizations.of(context).translate('ergo_change_1_title'),
+                ErgoColors.logoTextAccent),
             text: Texts.latoText(
-                'Hier möchten wir euch die wichtigsten Ergebnisse unserer Studienarbeit präsentieren. ',
+                ErgoLocalizations.of(context).translate('ergo_change_1_text'),
                 Colors.black),
             button: RaisedButton(
               color: Color.fromRGBO(44, 65, 104, 1.0),
               onPressed: () {},
-              child: Texts.latoButtonText('zum Poster', Colors.white),
+              child: Texts.latoButtonText(
+                  ErgoLocalizations.of(context)
+                      .translate('ergo_change_1_button'),
+                  Colors.white),
             ),
           ),
         ),
@@ -36,12 +41,16 @@ class ErgoChangePage extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: Texts.latoSubheader('Ausgangslage', Colors.white),
+                child: Texts.latoSubheader(
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_2_title'),
+                    Colors.white),
               ),
               Expanded(
                 flex: 1,
                 child: Texts.latoText(
-                    'Das Arbeiten nach ergotherapeutischen Praxismodellen verbessert nachweislich die Zufriedenheit der Therapeut*innen und Klient*innen sowie Therapieergebnisse. Die Implementierung modellgeleiteter Vorgehensweisen in Deutschland erfolgt jedoch zögerlich. ',
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_2_text'),
                     Colors.white),
               ),
             ],
@@ -54,12 +63,15 @@ class ErgoChangePage extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Texts.latoSubheader(
-                    'Forschungsfrage', ErgoColors.logoTextAccent),
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_3_title'),
+                    ErgoColors.logoTextAccent),
               ),
               Expanded(
                 flex: 1,
                 child: Texts.latoText(
-                    'Wie gestalten Ergotherapeuten in ambulanten Praxen den selbstgesteuerten Umstellungsprozess?',
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_3_text'),
                     ErgoColors.logoTextAccent),
               ),
             ],
@@ -71,12 +83,16 @@ class ErgoChangePage extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: Texts.latoSubheader('Ergebnisse', Colors.white),
+                child: Texts.latoSubheader(
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_4_title'),
+                    Colors.white),
               ),
               Expanded(
                 flex: 1,
                 child: Texts.latoText(
-                    'Ergotherapeut*innen gestalten den Umstellungsprozess anhand eines gemeinsamen Lernprozesses. Dieser lässt sich in Phasen nach etablierten Change-Management Modellen einteilen.\nEine offene Kommunikationskultur und gemeinsames Vorgehen, stellen die Basis dar, und ermöglichen einen Kreislauf der Wissensimplementierung im Team zu entwickeln und zu etablieren.\nAußerdem konnten wir konkrete Ressourcen und Barrieren im Prozessverlauf, sowie individuelle Lösungsstrategien der einzelnen Teams identifizieren. Des Weiteren wurde die Kooperation mit dem Klientel als relevanter Faktor identifiziert. ',
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_4_text'),
                     Colors.white),
               ),
             ],
@@ -89,12 +105,15 @@ class ErgoChangePage extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Texts.latoSubheader(
-                    'Schlussfolgerung', ErgoColors.logoTextAccent),
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_5_title'),
+                    ErgoColors.logoTextAccent),
               ),
               Expanded(
                 flex: 1,
                 child: Texts.latoText(
-                    'Die Ergebnisse zeigen Möglichkeiten zur erfolgreichen Implementierung internationaler ergotherapeutischer Praxismodelle in Deutschland. Change Modelle können Orientierung bieten, um selbstgesteuerte Umstellungsprozesse im Team gemeinschaftlich zu gestalten.',
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_5_text'),
                     ErgoColors.logoTextAccent),
               ),
             ],
@@ -112,15 +131,18 @@ class ErgoChangePage extends StatelessWidget {
           backgroundColor: Colors.white,
           content: TitleTextButton(
             title: Texts.latoSubheader(
-                'Du hast Fragen oder möchtest mehr wissen?',
+                ErgoLocalizations.of(context).translate('ergo_change_6_title'),
                 ErgoColors.logoTextAccent),
             text: Texts.latoText(
-                'Dann kontaktier uns!\nWir freuen uns, von dir zu hören!',
+                ErgoLocalizations.of(context).translate('ergo_change_6_text'),
                 Colors.black),
             button: RaisedButton(
               color: Color.fromRGBO(44, 65, 104, 1.0),
               onPressed: () {},
-              child: Texts.latoButtonText('Kontakt', Colors.white),
+              child: Texts.latoButtonText(
+                  ErgoLocalizations.of(context)
+                      .translate('ergo_change_6_button'),
+                  Colors.white),
             ),
           ),
         ),

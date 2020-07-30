@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/pages/layouts/webpage.dart';
@@ -21,11 +22,11 @@ class AboutPage extends StatelessWidget {
             title: Align(
               alignment: Alignment.centerLeft,
               child: Texts.latoHeader(
-                  'Wege entstehen dadurch, dass man sie geht.',
+                  ErgoLocalizations.of(context).translate('about_1_title'),
                   ErgoColors.logoTextAccent),
             ),
             text: Texts.latoText(
-                'Wir arbeiten beide in ambulanten  Ergotherapie- Praxen und haben selbst den Wandel zu modellgeleitetem Arbeiten gemeinsam im Team durchlaufen. Dabei entstand der Weg während wir ihn gegangen sind.\nDieser Prozess hat uns so gepackt, dass wir uns dann wissenschaftlich im Rahmen unseres Bachelorarbeit damit beschäftigt haben.\nSomit verbinden wir Theorie und Praxis miteinander. Dieses Wissen möchten wir gerne mit euch teilen! Machen wir uns gemeinsam auf den Weg!',
+                ErgoLocalizations.of(context).translate('about_1_text'),
                 Colors.black),
             button: RaisedButton(
               shape: RoundedRectangleBorder(
@@ -35,7 +36,9 @@ class AboutPage extends StatelessWidget {
               onPressed: () {},
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Texts.latoButtonText('Mehr lesen', Colors.white),
+                child: Texts.latoButtonText(
+                    ErgoLocalizations.of(context).translate('about_1_button'),
+                    Colors.white),
               ),
             ),
           ),

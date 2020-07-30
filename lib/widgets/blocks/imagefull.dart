@@ -8,6 +8,7 @@ class ImageFull extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String text;
+  final String buttonText;
   final Widget buttons;
 
   const ImageFull({
@@ -15,6 +16,7 @@ class ImageFull extends StatelessWidget {
     this.imageUrl,
     this.title,
     this.text,
+    this.buttonText,
     this.buttons,
   }) : super(key: key);
 
@@ -51,7 +53,7 @@ class ImageFull extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4.0),
                     ),
                     onPressed: () {},
-                    child: Texts.latoButtonText('Mehr lesen', Colors.white),
+                    child: Texts.latoButtonText(buttonText, Colors.white),
                   ),
                 ),
               ),
