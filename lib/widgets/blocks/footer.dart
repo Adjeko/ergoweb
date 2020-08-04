@@ -19,19 +19,19 @@ class Footer extends StatelessWidget {
           children: [
             FlatButton(
               onPressed: () {},
-              child: Texts.latoButtonText(
+              child: Texts.buttonText(
                   ErgoLocalizations.of(context).translate('impressum'),
                   Colors.white),
             ),
             FlatButton(
               onPressed: () {},
-              child: Texts.latoButtonText(
+              child: Texts.buttonText(
                   ErgoLocalizations.of(context).translate('datenschutz'),
                   Colors.white),
             ),
             FlatButton(
               onPressed: () {},
-              child: Texts.latoButtonText(
+              child: Texts.buttonText(
                   ErgoLocalizations.of(context).translate('cookie'),
                   Colors.white),
             ),

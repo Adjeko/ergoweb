@@ -21,11 +21,11 @@ class AboutPage extends StatelessWidget {
           ttb: TitleTextButton(
             title: Align(
               alignment: Alignment.centerLeft,
-              child: Texts.latoHeader(
+              child: Texts.header(
                   ErgoLocalizations.of(context).translate('about_1_title'),
                   ErgoColors.logoTextAccent),
             ),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('about_1_text'),
                 Colors.black),
             button: RaisedButton(
@@ -36,7 +36,7 @@ class AboutPage extends StatelessWidget {
               onPressed: () {},
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Texts.latoButtonText(
+                child: Texts.buttonText(
                     ErgoLocalizations.of(context).translate('about_1_button'),
                     Colors.white),
               ),

@@ -17,15 +17,15 @@ class CoursesPage extends StatelessWidget {
           imageUrl:
               'https://jimdo-storage.freetls.fastly.net/image/74237140/caa2b127-7a03-4972-955c-2f5e2da3847e.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2246&height=2560&trim=0,1724,0,1065',
           ttb: TitleTextButton(
-            title: Texts.latoHeader(
+            title: Texts.header(
                 ErgoLocalizations.of(context).translate('courses_1_title'),
                 Colors.white),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('courses_1_text'),
                 Colors.white),
             button: RaisedButton(
               onPressed: () {},
-              child: Texts.latoButtonText(
+              child: Texts.buttonText(
                   ErgoLocalizations.of(context).translate('courses_1_button'),
                   Colors.black),
             ),

@@ -19,7 +19,7 @@ class SideBySide extends StatelessWidget {
             Center(
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Texts.latoHeader(
+                child: Texts.header(
                     ErgoLocalizations.of(context).translate('about_2_title'),
                     Colors.white),
               ),
@@ -37,12 +37,12 @@ class SideBySide extends StatelessWidget {
                             height: MediaQuery.of(context).size.height / 1.75),
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: Texts.latoHeader(
+                          child: Texts.header(
                               ErgoLocalizations.of(context)
                                   .translate('about_2_left_name'),
                               Colors.white),
                         ),
-                        Texts.latoText(
+                        Texts.text(
                             ErgoLocalizations.of(context)
                                 .translate('about_2_left_text'),
                             Colors.white),
@@ -59,12 +59,12 @@ class SideBySide extends StatelessWidget {
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: Texts.latoHeader(
+                          child: Texts.header(
                               ErgoLocalizations.of(context)
                                   .translate('about_2__right_name'),
                               Colors.white),
                         ),
-                        Texts.latoText(
+                        Texts.text(
                             ErgoLocalizations.of(context)
                                 .translate('about_2__right_text'),
                             Colors.white),

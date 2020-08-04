@@ -23,21 +23,21 @@ class StayHomePage extends StatelessWidget {
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Texts.latoHeader(
+                  child: Texts.header(
                       ErgoLocalizations.of(context)
                           .translate('stay_home_1_title'),
                       ErgoColors.logoTextAccent),
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Texts.latoSubheader(
+                  child: Texts.subheader(
                       ErgoLocalizations.of(context)
                           .translate('stay_home_1_subtitle'),
                       ErgoColors.logoTextAccent),
                 ),
               ],
             ),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('stay_home_1_text'),
                 Colors.black),
             button: RaisedButton(
@@ -48,7 +48,7 @@ class StayHomePage extends StatelessWidget {
               onPressed: () {},
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Texts.latoButtonText(
+                child: Texts.buttonText(
                     ErgoLocalizations.of(context)
                         .translate('stay_home_1_button'),
                     Colors.white),
@@ -59,10 +59,10 @@ class StayHomePage extends StatelessWidget {
         TextBanner(
           backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
           content: TitleTextButton(
-            title: Texts.latoSubheader(
+            title: Texts.subheader(
                 ErgoLocalizations.of(context).translate('stay_home_2_title'),
                 Colors.white),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('stay_home_2_text'),
                 Colors.white),
             button: RaisedButton(
@@ -73,7 +73,7 @@ class StayHomePage extends StatelessWidget {
               onPressed: () {},
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Texts.latoButtonText(
+                child: Texts.buttonText(
                     ErgoLocalizations.of(context)
                         .translate('stay_home_2_button'),
                     Colors.black),

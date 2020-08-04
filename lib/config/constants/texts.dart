@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Texts {
+  static final header = bahnHeader;
+  static final subheader = bahnSubheader;
+  static final text = latoText;
+  static final buttonText = latoButtonText;
+
   static final latoHeader = (String text, Color color) => AutoSizeText(
         text,
         style: GoogleFonts.getFont(
@@ -53,21 +58,33 @@ class Texts {
         ),
       );
 
-  static final bahnHeader = (Color color) => TextStyle(
-        fontFamily: 'Bahnschrift',
-        fontSize: 14,
-        fontWeight: FontWeight.w700,
+  static final bahnHeader = (String text, Color color) => Text(
+        text,
+        style: TextStyle(
+          color: color,
+          fontFamily: 'Bahnschrift',
+          fontSize: 54,
+          fontWeight: FontWeight.w700,
+        ),
       );
 
-  static final bahnSubheader = (Color color) => TextStyle(
-        fontFamily: 'Bahnschrift',
-        fontSize: 12,
-        fontWeight: FontWeight.w700,
+  static final bahnSubheader = (String text, Color color) => Text(
+        text,
+        style: TextStyle(
+          color: color,
+          fontFamily: 'Bahnschrift',
+          fontSize: 30,
+          fontWeight: FontWeight.w700,
+        ),
       );
 
-  static final bahnText = (Color color) => TextStyle(
-        fontFamily: 'Bahnschrift',
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
+  static final bahnText = (String text, Color color) => Text(
+        text,
+        style: TextStyle(
+          color: color,
+          fontFamily: 'Bahnschrift',
+          fontSize: 24,
+          fontWeight: FontWeight.w400,
+        ),
       );
 }

@@ -19,7 +19,7 @@ class ContactPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 100.0),
-                child: Texts.latoSubheader(
+                child: Texts.subheader(
                     ErgoLocalizations.of(context).translate('contact_1_title'),
                     ErgoColors.logoTextAccent),
               ),
@@ -64,14 +64,14 @@ class ContactPage extends StatelessWidget {
               RaisedButton(
                 color: Color.fromRGBO(44, 65, 104, 1.0),
                 onPressed: () {},
-                child: Texts.latoButtonText('Absenden', Colors.white),
+                child: Texts.buttonText('Absenden', Colors.white),
               ),
             ],
           ),
         ),
         TextBanner(
           backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
-          content: Texts.latoSubheader(
+          content: Texts.subheader(
               ErgoLocalizations.of(context).translate('contact_2_text'),
               ErgoColors.logoTextAccent),
         ),

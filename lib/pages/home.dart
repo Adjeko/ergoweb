@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
         ),
         TextBanner(
           backgroundColor: Color.fromRGBO(44, 65, 104, 1.0),
-          content: Texts.latoSubheader(
+          content: Texts.subheader(
               ErgoLocalizations.of(context).translate('home_2_text'),
               Colors.white),
         ),
@@ -39,13 +39,13 @@ class HomePage extends StatelessWidget {
           ttb: TitleTextButton(
             title: Align(
               alignment: Alignment.centerLeft,
-              child: Texts.latoHeader(
+              child: Texts.header(
                   ErgoLocalizations.of(context).translate('home_3_title'),
                   Colors.white),
             ),
             text: Align(
               alignment: Alignment.centerLeft,
-              child: Texts.latoText(
+              child: Texts.text(
                   ErgoLocalizations.of(context).translate('home_3_text'),
                   Colors.white),
             ),
@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {},
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Texts.latoButtonText(
+                  child: Texts.buttonText(
                       ErgoLocalizations.of(context).translate('home_3_button'),
                       Colors.black),
                 ),
@@ -74,11 +74,11 @@ class HomePage extends StatelessWidget {
           ttb: TitleTextButton(
             title: Align(
               alignment: Alignment.centerLeft,
-              child: Texts.latoHeader(
+              child: Texts.header(
                   ErgoLocalizations.of(context).translate('home_4_title'),
                   ErgoColors.logoTextAccent),
             ),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('home_4_text'),
                 Colors.black),
             button: Padding(
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {},
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Texts.latoButtonText(
+                  child: Texts.buttonText(
                       ErgoLocalizations.of(context).translate('home_4_button'),
                       Colors.white),
                 ),
@@ -104,11 +104,11 @@ class HomePage extends StatelessWidget {
           ttb: TitleTextButton(
             title: Align(
               alignment: Alignment.centerLeft,
-              child: Texts.latoHeader(
+              child: Texts.header(
                   ErgoLocalizations.of(context).translate('home_5_title'),
                   ErgoColors.logoTextAccent),
             ),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('home_5_text'),
                 Colors.black),
             button: Padding(
@@ -119,7 +119,7 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4.0),
                 ),
                 onPressed: () {},
-                child: Texts.latoButtonText(
+                child: Texts.buttonText(
                     ErgoLocalizations.of(context).translate('home_5_button'),
                     Colors.white),
               ),
@@ -129,16 +129,16 @@ class HomePage extends StatelessWidget {
         TextBanner(
           backgroundColor: Colors.black,
           content: TitleTextButton(
-            title: Texts.latoSubheader(
+            title: Texts.subheader(
                 ErgoLocalizations.of(context).translate('home_6_title'),
                 Colors.white),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('home_6_text'),
                 Colors.white),
             button: RaisedButton(
               color: Colors.white,
               onPressed: () {},
-              child: Texts.latoButtonText(
+              child: Texts.buttonText(
                   ErgoLocalizations.of(context).translate('home_6_button'),
                   Colors.black),
             ),

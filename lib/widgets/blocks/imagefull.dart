@@ -43,8 +43,8 @@ class ImageFull extends StatelessWidget {
             ),
             Center(
               child: TitleTextButton(
-                title: Texts.latoHeader(title, ErgoColors.logoTextAccent),
-                text: Texts.latoSubheader(text, ErgoColors.logoTextAccent),
+                title: Texts.header(title, ErgoColors.logoTextAccent),
+                text: Texts.subheader(text, ErgoColors.logoTextAccent),
                 button: Padding(
                   padding: const EdgeInsets.only(top: 40.0),
                   child: RaisedButton(
@@ -53,7 +53,7 @@ class ImageFull extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4.0),
                     ),
                     onPressed: () {},
-                    child: Texts.latoButtonText(buttonText, Colors.white),
+                    child: Texts.buttonText(buttonText, Colors.white),
                   ),
                 ),
               ),

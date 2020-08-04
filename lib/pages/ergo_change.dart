@@ -19,16 +19,16 @@ class ErgoChangePage extends StatelessWidget {
           imageUrl:
               'https://jimdo-storage.freetls.fastly.net/image/87118133/98c0d631-1450-4dd7-a3fa-07b492a4802d.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=694&height=800&trim=32,0,180,0',
           ttb: TitleTextButton(
-            title: Texts.latoHeader(
+            title: Texts.header(
                 ErgoLocalizations.of(context).translate('ergo_change_1_title'),
                 ErgoColors.logoTextAccent),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('ergo_change_1_text'),
                 Colors.black),
             button: RaisedButton(
               color: Color.fromRGBO(44, 65, 104, 1.0),
               onPressed: () {},
-              child: Texts.latoButtonText(
+              child: Texts.buttonText(
                   ErgoLocalizations.of(context)
                       .translate('ergo_change_1_button'),
                   Colors.white),
@@ -41,14 +41,14 @@ class ErgoChangePage extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: Texts.latoSubheader(
+                child: Texts.subheader(
                     ErgoLocalizations.of(context)
                         .translate('ergo_change_2_title'),
                     Colors.white),
               ),
               Expanded(
                 flex: 1,
-                child: Texts.latoText(
+                child: Texts.text(
                     ErgoLocalizations.of(context)
                         .translate('ergo_change_2_text'),
                     Colors.white),
@@ -62,14 +62,14 @@ class ErgoChangePage extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: Texts.latoSubheader(
+                child: Texts.subheader(
                     ErgoLocalizations.of(context)
                         .translate('ergo_change_3_title'),
                     ErgoColors.logoTextAccent),
               ),
               Expanded(
                 flex: 1,
-                child: Texts.latoText(
+                child: Texts.text(
                     ErgoLocalizations.of(context)
                         .translate('ergo_change_3_text'),
                     ErgoColors.logoTextAccent),
@@ -83,14 +83,14 @@ class ErgoChangePage extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: Texts.latoSubheader(
+                child: Texts.subheader(
                     ErgoLocalizations.of(context)
                         .translate('ergo_change_4_title'),
                     Colors.white),
               ),
               Expanded(
                 flex: 1,
-                child: Texts.latoText(
+                child: Texts.text(
                     ErgoLocalizations.of(context)
                         .translate('ergo_change_4_text'),
                     Colors.white),
@@ -104,14 +104,14 @@ class ErgoChangePage extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: Texts.latoSubheader(
+                child: Texts.subheader(
                     ErgoLocalizations.of(context)
                         .translate('ergo_change_5_title'),
                     ErgoColors.logoTextAccent),
               ),
               Expanded(
                 flex: 1,
-                child: Texts.latoText(
+                child: Texts.text(
                     ErgoLocalizations.of(context)
                         .translate('ergo_change_5_text'),
                     ErgoColors.logoTextAccent),
@@ -130,16 +130,16 @@ class ErgoChangePage extends StatelessWidget {
         TextBanner(
           backgroundColor: Colors.white,
           content: TitleTextButton(
-            title: Texts.latoSubheader(
+            title: Texts.subheader(
                 ErgoLocalizations.of(context).translate('ergo_change_6_title'),
                 ErgoColors.logoTextAccent),
-            text: Texts.latoText(
+            text: Texts.text(
                 ErgoLocalizations.of(context).translate('ergo_change_6_text'),
                 Colors.black),
             button: RaisedButton(
               color: Color.fromRGBO(44, 65, 104, 1.0),
               onPressed: () {},
-              child: Texts.latoButtonText(
+              child: Texts.buttonText(
                   ErgoLocalizations.of(context)
                       .translate('ergo_change_6_button'),
                   Colors.white),
