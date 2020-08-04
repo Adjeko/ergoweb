@@ -23,7 +23,19 @@ class HomePage extends StatelessWidget {
               'https://jimdo-storage.freetls.fastly.net/image/74253843/141bc384-d06e-4391-a28a-2bc45f52f216.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=1707',
           title: ErgoLocalizations.of(context).translate('home_1_title'),
           text: ErgoLocalizations.of(context).translate('home_1_text'),
-          buttonText: ErgoLocalizations.of(context).translate('home_1_button'),
+          buttons: RaisedButton(
+            color: ErgoColors.logoTextAccent,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4.0),
+            ),
+            onPressed: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Texts.buttonText(
+                  ErgoLocalizations.of(context).translate('home_1_button'),
+                  Colors.white),
+            ),
+          ),
         ),
         TextBanner(
           backgroundColor: Color.fromRGBO(44, 65, 104, 1.0),
@@ -119,9 +131,12 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4.0),
                 ),
                 onPressed: () {},
-                child: Texts.buttonText(
-                    ErgoLocalizations.of(context).translate('home_5_button'),
-                    Colors.white),
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Texts.buttonText(
+                      ErgoLocalizations.of(context).translate('home_5_button'),
+                      Colors.white),
+                ),
               ),
             ),
           ),
@@ -138,9 +153,12 @@ class HomePage extends StatelessWidget {
             button: RaisedButton(
               color: Colors.white,
               onPressed: () {},
-              child: Texts.buttonText(
-                  ErgoLocalizations.of(context).translate('home_6_button'),
-                  Colors.black),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Texts.buttonText(
+                    ErgoLocalizations.of(context).translate('home_6_button'),
+                    Colors.black),
+              ),
             ),
           ),
         ),

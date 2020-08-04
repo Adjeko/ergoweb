@@ -17,9 +17,18 @@ class TitleTextButton extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        this.title,
-        this.text,
-        this.button,
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
+          child: this.title,
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
+          child: this.text,
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0.0, 25.0, 0.0, 0.0),
+          child: this.button,
+        ),
       ],
     );
   }

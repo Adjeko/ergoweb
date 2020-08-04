@@ -19,9 +19,13 @@ class SideBySide extends StatelessWidget {
             Center(
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Texts.header(
-                    ErgoLocalizations.of(context).translate('about_2_title'),
-                    Colors.white),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0, vertical: 30.0),
+                  child: Texts.header(
+                      ErgoLocalizations.of(context).translate('about_2_title'),
+                      Colors.white),
+                ),
               ),
             ),
             Container(

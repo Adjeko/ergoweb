@@ -40,7 +40,7 @@ class Texts {
           'Lato',
           textStyle: TextStyle(
             color: color,
-            fontSize: 24,
+            fontSize: 20,
             fontWeight: FontWeight.w400,
           ),
         ),

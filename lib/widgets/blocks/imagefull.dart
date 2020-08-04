@@ -8,7 +8,6 @@ class ImageFull extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String text;
-  final String buttonText;
   final Widget buttons;
 
   const ImageFull({
@@ -16,49 +15,63 @@ class ImageFull extends StatelessWidget {
     this.imageUrl,
     this.title,
     this.text,
-    this.buttonText,
     this.buttons,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: Stack(
-          children: [
-            Center(
-              child: Image.network(
-                imageUrl,
-                fit: BoxFit.cover,
-                height: double.infinity,
-                width: double.infinity,
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      child: Stack(
+        children: [
+          Center(
+            child: Image.network(
+              imageUrl,
+              fit: BoxFit.cover,
+              height: double.infinity,
+              width: double.infinity,
+            ),
+          ),
+          Opacity(
+            opacity: 0.8,
+            child: Container(
+              color: Colors.white,
+            ),
+          ),
+          Center(
+            child: TitleTextButton(
+              title: Texts.header(title, ErgoColors.logoTextAccent),
+              text: Texts.subheader(text, ErgoColors.logoTextAccent),
+              button: Padding(
+                padding: const EdgeInsets.only(top: 40.0),
+                child: buttons,
               ),
             ),
-            Opacity(
-              opacity: 0.8,
-              child: Container(
-                color: Colors.white,
-              ),
-            ),
-            Center(
-              child: TitleTextButton(
-                title: Texts.header(title, ErgoColors.logoTextAccent),
-                text: Texts.subheader(text, ErgoColors.logoTextAccent),
-                button: Padding(
-                  padding: const EdgeInsets.only(top: 40.0),
-                  child: RaisedButton(
-                    color: ErgoColors.logoTextAccent,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    onPressed: () {},
-                    child: Texts.buttonText(buttonText, Colors.white),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MyButton extends StatelessWidget {
+  const MyButton({
+    Key key,
+    @required this.buttonText,
+  }) : super(key: key);
+
+  final String buttonText;
+
+  @override
+  Widget build(BuildContext context) {
+    return RaisedButton(
+      color: ErgoColors.logoTextAccent,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(4.0),
+      ),
+      onPressed: () {},
+      child: Texts.buttonText(buttonText, Colors.white),
+    );
   }
 }

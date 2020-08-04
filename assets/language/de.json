@@ -30,7 +30,8 @@
     "stay_home_1_title": "Bleib zuhause und gesund",
     "stay_home_1_subtitle": "In Balance mit Ergotherapie",
     "stay_home_1_text": "In Quarantänezeiten sind Menschen aufgrund von Faktoren, die außerhalb ihrer Kontrolle liegen, von der Möglichkeit ausgeschlossen, an bedeutungsvollen Betätigungen teilzuhaben. Dies kann negative Auswirkungen auf dein Wohlbefinden und deine Gesundheit haben. Daher ist es gerade jetzt wichtig, eine Tagesstruktur zu schaffen und deine Betätigungen in Balance zu halten.\n\nHier kann dir Ergotherapie helfen!",
-    "stay_home_1_button": "zum Flyer",
+    "stay_home_1_button_1": "zum Flyer",
+    "stay_home_1_button_2": "zum Video",
 
     "stay_home_2_title": "Du hast Interesse an weiteren Angeboten?",
     "stay_home_2_text": "Dann schreib uns!",
@@ -55,14 +56,16 @@
     "ergo_change_5_text": "Die Ergebnisse zeigen Möglichkeiten zur erfolgreichen Implementierung internationaler ergotherapeutischer Praxismodelle in Deutschland. Change Modelle können Orientierung bieten, um selbstgesteuerte Umstellungsprozesse im Team gemeinschaftlich zu gestalten.",
 
     "ergo_change_6_title": "Du hast Fragen oder möchtest mehr wissen?",
-    "ergo_change_6_text": "Dann kontaktier uns!\nWir freuen uns, von dir zu hören!",
+    "ergo_change_6_text_1": "Dann kontaktier uns!",
+    "ergo_change_6_text_2": "Wir freuen uns, von dir zu hören!",
     "ergo_change_6_button": "Kontakt",
 
 
 
     "courses_1_title": "Kurse",
     "courses_1_text": "Unsere Online-Kurse bieten praxisnahes, aktuelles Ergotherapie-Wissen, auf den Punkt für euer Team.\nIhr entscheidet über Wissensinhalte, Ort und Zeit. Wir liefern praxisnahes Know-How und aktuelle Forschungsergebnisse.\nUnsere Videos könnt ihr in Teamsitzungen, an Fortbildungstagen, alleine oder gemeinsam ortsunabhängig nutzen. Zusätzlich möchten wir euch und euer Team dabei begleiten, das theoretische Wissen in eure Praxis zu übertragen. Jedes Modul beinhaltet neben fachlichem Wissen immer konkrete Praxistipps und Werkzeuge zur Anwendung in eurer praktischen Arbeit.\nGemeinsam machen wir uns mit euch auf den Weg hin zu betätigungsorientiertem und klientenzentriertem Arbeiten!",
-    "courses_1_button": "Kontakt",
+    "courses_1_button_1": "Kontakt",
+    "courses_1_button_2": "Mehr zu Umstellungsprozessen",
 
 
 

@@ -40,19 +40,43 @@ class StayHomePage extends StatelessWidget {
             text: Texts.text(
                 ErgoLocalizations.of(context).translate('stay_home_1_text'),
                 Colors.black),
-            button: RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(4.0),
-              ),
-              color: Color.fromRGBO(44, 65, 104, 1.0),
-              onPressed: () {},
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Texts.buttonText(
-                    ErgoLocalizations.of(context)
-                        .translate('stay_home_1_button'),
-                    Colors.white),
-              ),
+            button: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                    color: Color.fromRGBO(44, 65, 104, 1.0),
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Texts.buttonText(
+                          ErgoLocalizations.of(context)
+                              .translate('stay_home_1_button_1'),
+                          Colors.white),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                    color: Color.fromRGBO(44, 65, 104, 1.0),
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Texts.buttonText(
+                          ErgoLocalizations.of(context)
+                              .translate('stay_home_1_button_2'),
+                          Colors.white),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

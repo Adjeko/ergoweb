@@ -19,19 +19,29 @@ class ErgoChangePage extends StatelessWidget {
           imageUrl:
               'https://jimdo-storage.freetls.fastly.net/image/87118133/98c0d631-1450-4dd7-a3fa-07b492a4802d.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=694&height=800&trim=32,0,180,0',
           ttb: TitleTextButton(
-            title: Texts.header(
-                ErgoLocalizations.of(context).translate('ergo_change_1_title'),
-                ErgoColors.logoTextAccent),
-            text: Texts.text(
-                ErgoLocalizations.of(context).translate('ergo_change_1_text'),
-                Colors.black),
+            title: Align(
+              alignment: Alignment.centerLeft,
+              child: Texts.header(
+                  ErgoLocalizations.of(context)
+                      .translate('ergo_change_1_title'),
+                  ErgoColors.logoTextAccent),
+            ),
+            text: Align(
+              alignment: Alignment.centerLeft,
+              child: Texts.text(
+                  ErgoLocalizations.of(context).translate('ergo_change_1_text'),
+                  Colors.black),
+            ),
             button: RaisedButton(
               color: Color.fromRGBO(44, 65, 104, 1.0),
               onPressed: () {},
-              child: Texts.buttonText(
-                  ErgoLocalizations.of(context)
-                      .translate('ergo_change_1_button'),
-                  Colors.white),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Texts.buttonText(
+                    ErgoLocalizations.of(context)
+                        .translate('ergo_change_1_button'),
+                    Colors.white),
+              ),
             ),
           ),
         ),
@@ -130,12 +140,28 @@ class ErgoChangePage extends StatelessWidget {
         TextBanner(
           backgroundColor: Colors.white,
           content: TitleTextButton(
-            title: Texts.subheader(
-                ErgoLocalizations.of(context).translate('ergo_change_6_title'),
-                ErgoColors.logoTextAccent),
-            text: Texts.text(
-                ErgoLocalizations.of(context).translate('ergo_change_6_text'),
-                Colors.black),
+            title: Align(
+              alignment: Alignment.center,
+              child: Texts.subheader(
+                  ErgoLocalizations.of(context)
+                      .translate('ergo_change_6_title'),
+                  ErgoColors.logoTextAccent),
+            ),
+            text: Align(
+              alignment: Alignment.center,
+              child: Column(
+                children: [
+                  Texts.text(
+                      ErgoLocalizations.of(context)
+                          .translate('ergo_change_6_text_1'),
+                      Colors.black),
+                  Texts.text(
+                      ErgoLocalizations.of(context)
+                          .translate('ergo_change_6_text_2'),
+                      Colors.black),
+                ],
+              ),
+            ),
             button: RaisedButton(
               color: Color.fromRGBO(44, 65, 104, 1.0),
               onPressed: () {},
