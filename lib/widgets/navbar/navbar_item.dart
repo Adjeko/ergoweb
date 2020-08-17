@@ -1,5 +1,3 @@
-import 'package:ergoweb/services/router.dart';
-import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 
 class NavbarItem extends StatelessWidget {
@@ -20,9 +18,7 @@ class NavbarItem extends StatelessWidget {
         alignment: Alignment.centerRight,
         child: FlatButton(
           onPressed: () {
-            // Navigator.pushReplacementNamed(context, this.nextPageRoute);
-            FluroRouter.router.navigateTo(context, nextPageRoute,
-                transition: TransitionType.materialFullScreenDialog);
+            Navigator.pushNamed(context, this.nextPageRoute);
           },
           child: Text(
             this.text,
