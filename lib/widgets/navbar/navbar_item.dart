@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class NavbarItem extends StatelessWidget {
   final String text;
-  final Widget nextPage;
+  final String nextPageRoute;
 
   const NavbarItem({
     Key key,
     this.text,
-    this.nextPage,
+    this.nextPageRoute,
   }) : super(key: key);
 
   @override
@@ -18,10 +18,7 @@ class NavbarItem extends StatelessWidget {
         alignment: Alignment.centerRight,
         child: FlatButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => nextPage),
-            );
+            Navigator.pushNamed(context, this.nextPageRoute);
           },
           child: Text(
             this.text,

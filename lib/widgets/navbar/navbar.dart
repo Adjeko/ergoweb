@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ergoweb/config/constants/routes.dart';
 import 'package:ergoweb/pages/about.dart';
 import 'package:ergoweb/pages/contact.dart';
 import 'package:ergoweb/pages/home.dart';
@@ -55,27 +56,27 @@ class _NavbarState extends State<Navbar> {
                 children: [
                   NavbarItem(
                     text: 'Home',
-                    nextPage: HomePage(),
+                    nextPageRoute: HomeRoute,
                   ),
                   NavbarItem(
                     text: 'Bleib zuhause und gesund',
-                    nextPage: StayHomePage(),
+                    nextPageRoute: StayHomeRoute,
                   ),
                   NavbarItem(
                     text: 'Ergotherapie im Wandel',
-                    nextPage: ErgoChangePage(),
+                    nextPageRoute: ErgoChangeRoute,
                   ),
                   NavbarItem(
                     text: 'Kurse',
-                    nextPage: CoursesPage(),
+                    nextPageRoute: CoursesRoute,
                   ),
                   NavbarItem(
                     text: 'Über uns',
-                    nextPage: AboutPage(),
+                    nextPageRoute: AboutRoute,
                   ),
                   NavbarItem(
                     text: 'Kontakt',
-                    nextPage: ContactPage(),
+                    nextPageRoute: ContactRoute,
                   ),
                 ],
               ),

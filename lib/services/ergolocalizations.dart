@@ -23,8 +23,8 @@ class ErgoLocalizations {
 
   Future<bool> load() async {
     // Load the language JSON file from the "lang" folder
-    String jsonString =
-        await rootBundle.loadString('language/${locale.languageCode}.json');
+    String jsonString = await rootBundle
+        .loadString('assets/language/${locale.languageCode}.json');
     Map<String, dynamic> jsonMap = json.decode(jsonString);
 
     _localizedStrings = jsonMap.map((key, value) {

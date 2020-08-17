@@ -3,6 +3,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/pages/home.dart';
+import 'package:ergoweb/config/constants/routes.dart';
+import 'package:ergoweb/services/router.dart' as router;
 
 void main() {
   runApp(MyApp());
@@ -40,7 +42,9 @@ class MyApp extends StatelessWidget {
         // from the list (English, in this case).
         return supportedLocales.first;
       },
-      home: HomePage(),
+      onGenerateRoute: router.generateRoute,
+      initialRoute: HomeRoute,
+      // home: HomePage(),
     );
   }
 }
