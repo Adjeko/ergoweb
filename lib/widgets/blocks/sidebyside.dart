@@ -2,7 +2,6 @@ import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/widgets/block_elements/half_side_content.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SideBySide extends StatelessWidget {
   const SideBySide({Key key}) : super(key: key);
