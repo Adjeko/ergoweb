@@ -8,33 +8,59 @@ import 'package:ergoweb/config/constants/routes.dart';
 import 'package:ergoweb/pages/about.dart';
 import 'package:ergoweb/pages/home.dart';
 
+class Path {
+  const Path(this.pattern, this.builder);
+
+  final String pattern;
+  final Widget Function(BuildContext, String) builder;
+}
+
+List<Path> paths = [
+  // Path(
+  //   r'^/article/([\w-]+)$',
+  //   (context, match) => Article.getArticlePage(match),
+  // ),
+  Path(
+    r'^' + HomeRoute,
+    (context, match) => HomePage(),
+  ),
+  Path(
+    r'^' + AboutRoute,
+    (context, match) => AboutPage(),
+  ),
+  Path(
+    r'^' + StayHomeRoute,
+    (context, match) => StayHomePage(),
+  ),
+  Path(
+    r'^' + ErgoChangeRoute,
+    (context, match) => ErgoChangePage(),
+  ),
+  Path(
+    r'^' + CoursesRoute,
+    (context, match) => CoursesPage(),
+  ),
+  Path(
+    r'^' + ContactRoute,
+    (context, match) => ContactPage(),
+  ),
+];
+
 Route<dynamic> generateRoute(RouteSettings settings) {
-  switch (settings.name) {
-    case HomeRoute:
+  for (Path path in paths) {
+    final regExpPattern = RegExp(path.pattern);
+    if (regExpPattern.hasMatch(settings.name)) {
+      final firstMatch = regExpPattern.firstMatch(settings.name);
+      final match = (firstMatch.groupCount == 1) ? firstMatch.group(1) : null;
       return MaterialPageRoute(
-          settings: RouteSettings(name: HomeRoute),
-          builder: (context) => HomePage());
-    case AboutRoute:
-      return MaterialPageRoute(
-          settings: RouteSettings(name: AboutRoute),
-          builder: (context) => AboutPage());
-    case StayHomeRoute:
-      return MaterialPageRoute(
-          settings: RouteSettings(name: StayHomeRoute),
-          builder: (context) => StayHomePage());
-    case ErgoChangeRoute:
-      return MaterialPageRoute(
-          settings: RouteSettings(name: ErgoChangeRoute),
-          builder: (context) => ErgoChangePage());
-    case CoursesRoute:
-      return MaterialPageRoute(
-          settings: RouteSettings(name: CoursesRoute),
-          builder: (context) => CoursesPage());
-    case ContactRoute:
-      return MaterialPageRoute(
-          settings: RouteSettings(name: ContactRoute),
-          builder: (context) => ContactPage());
-    default:
-      return MaterialPageRoute(builder: (context) => HomePage());
+        settings: settings,
+        builder: (context) => path.builder(context, match),
+      );
+    }
   }
+
+  return MaterialPageRoute(
+    settings: RouteSettings(name: HomeRoute),
+    builder: (context) => HomePage(),
+  );
 }
