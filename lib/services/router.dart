@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:ergoweb/config/constants/routes.dart';
 import 'package:ergoweb/pages/about.dart';
 import 'package:ergoweb/pages/home.dart';
+import 'package:ergoweb/pages/test.dart';
 
 class Path {
   const Path(this.pattern, this.builder);
@@ -44,6 +45,10 @@ List<Path> paths = [
     r'^' + ContactRoute,
     (context, match) => ContactPage(),
   ),
+  Path(
+    r'^' + TestRoute,
+    (context, match) => TestPage(),
+  ),
 ];
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -60,7 +65,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   }
 
   return MaterialPageRoute(
-    settings: RouteSettings(name: HomeRoute),
-    builder: (context) => HomePage(),
+    settings: RouteSettings(name: TestRoute),
+    builder: (context) => TestPage(),
   );
+  // return MaterialPageRoute(
+  //   settings: RouteSettings(name: HomeRoute),
+  //   builder: (context) => HomePage(),
+  // );
 }

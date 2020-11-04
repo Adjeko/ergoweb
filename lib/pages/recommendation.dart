@@ -1,4 +1,4 @@
-import 'package:ergoweb/pages/layouts/webpage.dart';
+import 'package:ergoweb/layouts/layouts.dart';
 import 'package:flutter/material.dart';
 
 class RecommendationPage extends StatelessWidget {

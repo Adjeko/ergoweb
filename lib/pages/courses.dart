@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/config/constants/texts.dart';
-import 'package:ergoweb/pages/layouts/webpage.dart';
-import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
+import 'package:ergoweb/layouts/layouts.dart';
+import 'package:ergoweb/widgets/title_text_button.dart';
 import 'package:ergoweb/widgets/blocks/imageside.dart';
 
 class CoursesPage extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
+import 'package:ergoweb/widgets/title_text_button.dart';
 import 'package:ergoweb/widgets/block_elements/half_side_content.dart';
 import 'package:ergoweb/widgets/block_elements/half_side_image.dart';
 

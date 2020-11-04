@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
-import 'package:ergoweb/pages/layouts/webpage.dart';
+import 'package:ergoweb/layouts/layouts.dart';
 import 'package:ergoweb/widgets/blocks/textbanner.dart';
 
 class ContactPage extends StatelessWidget {

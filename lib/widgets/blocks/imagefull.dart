@@ -2,7 +2,7 @@ import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
+import 'package:ergoweb/widgets/title_text_button.dart';
 
 class ImageFull extends StatelessWidget {
   final String imageUrl;

@@ -15,7 +15,6 @@ class TitleTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
           padding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
-import 'package:ergoweb/widgets/block_elements/title_text_button.dart';
+import 'package:ergoweb/widgets/title_text_button.dart';
 import 'package:ergoweb/widgets/blocks/imagefull.dart';
 import 'package:ergoweb/widgets/blocks/imageside.dart';
 import 'package:ergoweb/widgets/blocks/textbanner.dart';
-import 'package:ergoweb/pages/layouts/webpage.dart';
+import 'package:ergoweb/layouts/layouts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({

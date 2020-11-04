@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
         return supportedLocales.first;
       },
       onGenerateRoute: router.generateRoute,
-      initialRoute: HomeRoute,
+      initialRoute: TestRoute,
       // home: HomePage(),
     );
   }
