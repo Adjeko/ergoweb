@@ -1,3 +1,4 @@
+import 'package:ergoweb/layouts/gridblock.dart';
 import 'package:ergoweb/layouts/sidebysideblock.dart';
 import 'package:flutter/material.dart';
 
@@ -55,10 +56,164 @@ class TestPage extends StatelessWidget {
           child: Text("HAllo WELT"),
         ),
         SideBySideBlock(
-          backgroundColor: Colors.white,
-          leftchild: Text("LINKS"),
-          rightchild: Text("RECHTS"),
-        )
+          backgroundColor: Colors.blue,
+          onTop: Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 40.0),
+              child: Texts.header(
+                  ErgoLocalizations.of(context).translate('about_2_title'),
+                  Colors.white),
+            ),
+          ),
+          leftchild: ImageTitleTextButton(
+            imageUrl:
+                'https://jimdo-storage.freetls.fastly.net/image/74236941/ac32471b-edd0-4cff-934b-3cffb0641017.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2458&trim=0,385,0,1587',
+            title: Align(
+              alignment: Alignment.centerLeft,
+              child: Texts.header(
+                  ErgoLocalizations.of(context).translate('about_2_left_name'),
+                  Colors.white),
+            ),
+            text: Texts.text(
+                ErgoLocalizations.of(context).translate('about_2_left_text'),
+                Colors.white),
+            button: null,
+          ),
+          rightchild: ImageTitleTextButton(
+            imageUrl:
+                'https://jimdo-storage.freetls.fastly.net/image/74237139/0b844be8-3894-4e74-8637-2d3962f5c477.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2560&trim=0,1120,0,1120',
+            title: Align(
+              alignment: Alignment.centerLeft,
+              child: Texts.header(
+                  ErgoLocalizations.of(context)
+                      .translate('about_2__right_name'),
+                  Colors.white),
+            ),
+            text: Texts.text(
+                ErgoLocalizations.of(context).translate('about_2__right_text'),
+                Colors.white),
+            button: null,
+          ),
+        ),
+        GridBlock(
+          backgroundColor: Colors.blue,
+          onTop: Texts.header("Grid Übersicht", Colors.white),
+          children: [
+            ImageTitleTextButton(
+              imageUrl:
+                  'https://jimdo-storage.freetls.fastly.net/image/74237139/0b844be8-3894-4e74-8637-2d3962f5c477.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2560&trim=0,1120,0,1120',
+              title: Align(
+                alignment: Alignment.centerLeft,
+                child: Texts.header(
+                    ErgoLocalizations.of(context)
+                        .translate('about_2__right_name'),
+                    Colors.white),
+              ),
+              text: Texts.text(
+                  ErgoLocalizations.of(context)
+                      .translate('about_2__right_text'),
+                  Colors.white),
+              button: null,
+            ),
+            ImageTitleTextButton(
+              imageUrl:
+                  'https://jimdo-storage.freetls.fastly.net/image/74237139/0b844be8-3894-4e74-8637-2d3962f5c477.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2560&trim=0,1120,0,1120',
+              title: Align(
+                alignment: Alignment.centerLeft,
+                child: Texts.header(
+                    ErgoLocalizations.of(context)
+                        .translate('about_2__right_name'),
+                    Colors.white),
+              ),
+              text: Texts.text(
+                  ErgoLocalizations.of(context)
+                      .translate('about_2__right_text'),
+                  Colors.white),
+              button: null,
+            ),
+            ImageTitleTextButton(
+              imageUrl:
+                  'https://jimdo-storage.freetls.fastly.net/image/74237139/0b844be8-3894-4e74-8637-2d3962f5c477.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2560&trim=0,1120,0,1120',
+              title: Align(
+                alignment: Alignment.centerLeft,
+                child: Texts.header(
+                    ErgoLocalizations.of(context)
+                        .translate('about_2__right_name'),
+                    Colors.white),
+              ),
+              text: Texts.text(
+                  ErgoLocalizations.of(context)
+                      .translate('about_2__right_text'),
+                  Colors.white),
+              button: null,
+            ),
+            ImageTitleTextButton(
+              imageUrl:
+                  'https://jimdo-storage.freetls.fastly.net/image/74237139/0b844be8-3894-4e74-8637-2d3962f5c477.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2560&trim=0,1120,0,1120',
+              title: Align(
+                alignment: Alignment.centerLeft,
+                child: Texts.header(
+                    ErgoLocalizations.of(context)
+                        .translate('about_2__right_name'),
+                    Colors.white),
+              ),
+              text: Texts.text(
+                  ErgoLocalizations.of(context)
+                      .translate('about_2__right_text'),
+                  Colors.white),
+              button: null,
+            ),
+            ImageTitleTextButton(
+              imageUrl:
+                  'https://jimdo-storage.freetls.fastly.net/image/74237139/0b844be8-3894-4e74-8637-2d3962f5c477.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2560&trim=0,1120,0,1120',
+              title: Align(
+                alignment: Alignment.centerLeft,
+                child: Texts.header(
+                    ErgoLocalizations.of(context)
+                        .translate('about_2__right_name'),
+                    Colors.white),
+              ),
+              text: Texts.text(
+                  ErgoLocalizations.of(context)
+                      .translate('about_2__right_text'),
+                  Colors.white),
+              button: null,
+            ),
+            ImageTitleTextButton(
+              imageUrl:
+                  'https://jimdo-storage.freetls.fastly.net/image/74237139/0b844be8-3894-4e74-8637-2d3962f5c477.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2560&trim=0,1120,0,1120',
+              title: Align(
+                alignment: Alignment.centerLeft,
+                child: Texts.header(
+                    ErgoLocalizations.of(context)
+                        .translate('about_2__right_name'),
+                    Colors.white),
+              ),
+              text: Texts.text(
+                  ErgoLocalizations.of(context)
+                      .translate('about_2__right_text'),
+                  Colors.white),
+              button: null,
+            ),
+            ImageTitleTextButton(
+              imageUrl:
+                  'https://jimdo-storage.freetls.fastly.net/image/74237139/0b844be8-3894-4e74-8637-2d3962f5c477.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=2560&trim=0,1120,0,1120',
+              title: Align(
+                alignment: Alignment.centerLeft,
+                child: Texts.header(
+                    ErgoLocalizations.of(context)
+                        .translate('about_2__right_name'),
+                    Colors.white),
+              ),
+              text: Texts.text(
+                  ErgoLocalizations.of(context)
+                      .translate('about_2__right_text'),
+                  Colors.white),
+              button: null,
+            ),
+          ],
+        ),
       ],
     );
   }

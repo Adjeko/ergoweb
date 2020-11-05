@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:ergoweb/config/constants/routes.dart';
 import 'package:ergoweb/pages/about.dart';
 import 'package:ergoweb/pages/home.dart';
-import 'package:ergoweb/pages/test.dart';
+import 'package:ergoweb/pages/pages.dart';
 
 class Path {
   const Path(this.pattern, this.builder);
@@ -48,6 +48,10 @@ List<Path> paths = [
   Path(
     r'^' + TestRoute,
     (context, match) => TestPage(),
+  ),
+  Path(
+    r'^' + EmptyRoute,
+    (context, match) => EmptyPage(),
   ),
 ];
 
