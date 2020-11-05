@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:ergoweb/services/ergolocalizations.dart';
-import 'package:ergoweb/config/constants/colors.dart';
-import 'package:ergoweb/config/constants/texts.dart';
-import 'package:ergoweb/layouts/layouts.dart';
-import 'package:ergoweb/widgets/title_text_button.dart';
+import 'package:ergoweb/ergoweb.dart';
 
 class StayHomePage extends StatelessWidget {
   @override

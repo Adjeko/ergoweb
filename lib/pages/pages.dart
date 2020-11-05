@@ -1,2 +1,9 @@
-export 'test.dart';
+export 'about.dart';
+export 'contact.dart';
+export 'courses.dart';
 export 'empty.dart';
+export 'ergo_change.dart';
+export 'home.dart';
+export 'recommendation.dart';
+export 'stay_home.dart';
+export 'test.dart';

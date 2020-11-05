@@ -1,11 +1,5 @@
-import 'package:ergoweb/layouts/gridblock.dart';
-import 'package:ergoweb/layouts/sidebysideblock.dart';
 import 'package:flutter/material.dart';
-
-import 'package:ergoweb/config/config.dart';
-import 'package:ergoweb/services/services.dart';
-import 'package:ergoweb/layouts/layouts.dart';
-import 'package:ergoweb/widgets/widgets.dart';
+import 'package:ergoweb/ergoweb.dart';
 
 class TestPage extends StatelessWidget {
   @override

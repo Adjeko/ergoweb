@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'package:ergoweb/services/ergolocalizations.dart';
-import 'package:ergoweb/pages/home.dart';
-import 'package:ergoweb/config/constants/routes.dart';
+import 'package:ergoweb/ergoweb.dart';
 import 'package:ergoweb/services/router.dart' as router;
 
 void main() {

@@ -1,2 +1,2 @@
-export 'router.dart';
 export 'ergolocalizations.dart';
+export 'router.dart';

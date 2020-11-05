@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:ergoweb/services/ergolocalizations.dart';
-import 'package:ergoweb/config/constants/colors.dart';
-import 'package:ergoweb/config/constants/texts.dart';
-import 'package:ergoweb/layouts/layouts.dart';
+import 'package:ergoweb/ergoweb.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({Key key}) : super(key: key);

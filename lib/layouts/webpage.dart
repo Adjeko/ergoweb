@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:ergoweb/components/footer.dart';
-import 'package:ergoweb/widgets/navbar/navbar.dart';
+import 'package:ergoweb/ergoweb.dart';
 
 class WebPage extends StatelessWidget {
   final List<Widget> children;

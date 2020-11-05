@@ -1,6 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:ergoweb/config/config.dart';
+import 'package:ergoweb/ergoweb.dart';
 
 class PictureAndContentBlock extends StatelessWidget {
   final Widget child;
