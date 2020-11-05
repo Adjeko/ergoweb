@@ -4,7 +4,6 @@ import 'package:ergoweb/services/ergolocalizations.dart';
 import 'package:ergoweb/config/constants/colors.dart';
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/layouts/layouts.dart';
-import 'package:ergoweb/widgets/blocks/textbanner.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({Key key}) : super(key: key);
@@ -69,9 +68,9 @@ class ContactPage extends StatelessWidget {
             ],
           ),
         ),
-        TextBanner(
+        FreeSizeBlock(
           backgroundColor: Color.fromRGBO(209, 210, 203, 1.0),
-          content: Texts.subheader(
+          child: Texts.subheader(
               ErgoLocalizations.of(context).translate('contact_2_text'),
               ErgoColors.logoTextAccent),
         ),

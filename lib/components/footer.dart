@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ergoweb/config/constants/texts.dart';
 import 'package:ergoweb/services/ergolocalizations.dart';
-import 'package:ergoweb/widgets/blocks/textbanner.dart';
+import 'package:ergoweb/layouts/freesizeblock.dart';
 
 class Footer extends StatelessWidget {
   const Footer({
@@ -11,9 +11,9 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextBanner(
+    return FreeSizeBlock(
       backgroundColor: Color.fromRGBO(44, 65, 104, 1.0),
-      content: Align(
+      child: Align(
         alignment: Alignment.centerRight,
         child: Column(
           children: [
