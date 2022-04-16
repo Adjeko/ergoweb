@@ -4,3 +4,4 @@
 /// <reference path="./textblock/textblock.d.ts" />
 /// <reference path="./iconcard/iconcard.d.ts" />
 /// <reference path="./centercolumnlayout/centercolumnlayout.d.ts" />
+/// <reference path="./twosidelayout/twosidelayout.d.ts" />
