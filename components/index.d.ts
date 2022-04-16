@@ -5,3 +5,4 @@
 /// <reference path="./iconcard/iconcard.d.ts" />
 /// <reference path="./centercolumnlayout/centercolumnlayout.d.ts" />
 /// <reference path="./twosidelayout/twosidelayout.d.ts" />
+/// <reference path="./textlink/textlink.d.ts" />
