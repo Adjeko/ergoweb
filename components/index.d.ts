@@ -1,0 +1,1 @@
+/// <reference path="./mainbutton/mainbutton.d.ts" />
