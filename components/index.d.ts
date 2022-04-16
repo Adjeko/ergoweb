@@ -2,3 +2,4 @@
 /// <reference path="./secondarybutton/secondarybutton.d.ts" />
 /// <reference path="./loginbutton/loginbutton.d.ts" />
 /// <reference path="./textblock/textblock.d.ts" />
+/// <reference path="./iconcard/iconcard.d.ts" />
