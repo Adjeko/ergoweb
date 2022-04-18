@@ -15,18 +15,18 @@ const Home: NextPage = () => {
     <>
       <Navbar />
 
-      <Centercolumnlayout>
-        <Twosidelayout ratio={50}>
+      {/* <Centercolumnlayout> */}
+        {/* <Twosidelayout ratio={50}> */}
           <div>
             <Textblock title='Ergotherapie Fortbildungen für euer Team' text='Wir sind gemeinsam auf dem Weg !' alignment='left' />
-            <div className='flex flex-row gap-5'>
+            {/* <div className='flex flex-row'> */}
               <Mainbutton text='zu den Modulen' href='/' />
               <Secondarybutton text='Kontaktiere uns' href='/' />
-            </div>
+            {/* </div> */}
           </div>
           <div></div>
-        </Twosidelayout>
-      </Centercolumnlayout>
+        {/* </Twosidelayout> */}
+      {/* </Centercolumnlayout> */}
 
       <Centercolumnlayout>
         <Textblock title='Was ist Ergo Unterwegs?' text='Wir bieten deinem Ergotherapie-Team innovative Online-Fortbildungsmodule.
