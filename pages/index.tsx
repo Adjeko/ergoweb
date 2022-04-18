@@ -16,8 +16,8 @@ const Home: NextPage = () => {
       <Navbar />
 
       <Centercolumnlayout>
-        <Twosidelayout ratio={50}>
-          <div className='items-center justify-center align-middle'>
+        <Twosidelayout>
+          <div className=''>
             <Textblock title='Ergotherapie Fortbildungen für euer Team' text='Wir sind gemeinsam auf dem Weg !' alignment='left' />
             <div className='flex flex-row items-start'> 
               <Mainbutton text='zu den Modulen' href='/' />
@@ -47,7 +47,7 @@ Zusätzlich erhaltet ihr auf unserer Lernplattform ein Jahr lang:
       </Centercolumnlayout>
 
       <Centercolumnlayout>
-        <Twosidelayout ratio={50}>
+        <Twosidelayout>
           <div>
             <Textblock title='Unsere Module' text='Wir bieten euch über unsere Online-Module innovative und flexible Werkzeuge, um in eurer Praxis betätigungsorientiert, klientenzentriert und evidenzbasiert zu arbeiten.
 Macht euch gemeinsam mit eurem Team auf den Weg!' alignment='left' />
@@ -58,7 +58,7 @@ Macht euch gemeinsam mit eurem Team auf den Weg!' alignment='left' />
         </Twosidelayout>
       </Centercolumnlayout>
 
-      <Twosidelayout ratio={50}>
+      <Twosidelayout>
         <div>
           <Textblock title='Ergotherapie im Wandel' text='Die Wissensbasis der Ergotherapie wird ständig erweitert und verändert. Wir alle wollen unseren Klient:innen die bestmögliche Therapie anbieten. Aber wie kann man da im stressigen Praxisalltag auf dem Laufenden bleiben?
 Wir haben uns die Theorie hinter der Praxis angeschaut und stellen euch unsere Lösungen vor!' alignment='center' />
@@ -67,7 +67,7 @@ Wir haben uns die Theorie hinter der Praxis angeschaut und stellen euch unsere L
       </Twosidelayout>
 
       <Centercolumnlayout>
-        <Twosidelayout ratio={50}>
+        <Twosidelayout>
           <div>
             <Textblock title='Über uns' text='Wir, Sarah und Sara, sind Ergotherapeutinnen mit langjähriger Erfahrung in ambulanten Praxen und begleiten dein Team auf dem Weg zu mehr Klientenzentrierung, Betätigungsorientierung und Evidenzbasierung. Durch unser Studium und das Gestalten unseres ersten gemeinsamen Change-Prozesses gelang es uns, diese Werte zu vertiefen und praxisnahe Strategien zu entwickeln, die wir mit euch teilen möchten.
 Wir sind fest davon überzeugt, dass wir alle im Team mehr erreichen können. In unseren Online-Module bieten wir euch deshalb nicht nur ergotherapeutisches Fachwissen auf dem neuesten Stand der Forschung, sondern geben euch auch das Handwerkszeug, diese Inhalte in euren Praxisalltag zu übertragen.
@@ -86,7 +86,7 @@ Starte noch heute!' alignment='center' />
 
       <Centercolumnlayout>
         <Textblock title='Lerne unsere Module kennen' text='' alignment='center' />
-        <Twosidelayout ratio={50}>
+        <Twosidelayout>
           <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/03/Clip6.jpg' />
           <div className='flex flex-row'>
             <Iconcard icon={<BriefcaseIcon />} title='Ergotherapeutische Modelle - Grundlagen' text='Modellgeleitetes Arbeiten in der Ergotherapie bringt viele Vorteile - aber auch Komplexität mit sich. Wir gestalten mit euch den Weg von der Theorie bis zur Umsetzung im Praxisalltag!' alignment='center' />
@@ -95,7 +95,7 @@ Starte noch heute!' alignment='center' />
         </Twosidelayout>
       </Centercolumnlayout>
 
-      <Twosidelayout ratio={50}>
+      <Twosidelayout>
         <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/02/965a5cb6-7a8c-48bc-9b6c-b2d995ab43cd.jpg' />
         <div>
           <Textblock title='Interessiert?' text='Schreibt uns einfach über das Kontaktformular! 
