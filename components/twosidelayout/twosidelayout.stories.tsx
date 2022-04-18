@@ -7,7 +7,7 @@ export default{
 }
 
 const DefaultTemplate = (args : TwosidelayoutProps) => (
-    <Twosidelayout ratio={args.ratio}>
+    <Twosidelayout>
         {args.children}
     </Twosidelayout>
 )
@@ -17,6 +17,5 @@ export const Default = DefaultTemplate.bind({})
 let defaultArgs : TwosidelayoutProps= {
     children: [<div className='w-full h-full min-w-full min-h-full bg-red-300'>Hallo Links</div>,
                 <div className='w-full h-full min-w-full min-h-full bg-green-300'>Hallo Rechts</div>],
-    ratio: 50,
 }
 Default.args = defaultArgs

@@ -1,15 +1,12 @@
 
 const Twosidelayout = (props: TwosidelayoutProps) => {
 
-  let leftSide = Math.floor(props.ratio);
-  let rightSide = Math.floor(100 - props.ratio);
-
   return (
-    <div className="flex flex-row w-screen">
-      <div className={"w-[" + leftSide + "%]"}>
+    <div className="grid grid-cols-2">
+      <div className={""}>
         {props.children[0]}
       </div>
-      <div className={"w-[" + rightSide + "%]"}>
+      <div className={""}>
         {props.children[1]}
       </div>
     </div>
