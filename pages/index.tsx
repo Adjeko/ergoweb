@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
       <Centercolumnlayout>
         <Twosidelayout ratio={50}>
-          <div>
+          <div className='items-center justify-center align-middle'>
             <Textblock title='Ergotherapie Fortbildungen für euer Team' text='Wir sind gemeinsam auf dem Weg !' alignment='left' />
             <div className='flex flex-row items-start'> 
               <Mainbutton text='zu den Modulen' href='/' />
