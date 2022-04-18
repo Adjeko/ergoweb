@@ -2,12 +2,12 @@
 const Centercolumnlayout = (props: CentercolumnlayoutProps) => {
 
     return (
-      <div className="flex flex-row">
-        <div className='w-1/5'></div>
-        <div className="w-3/5 overflow-auto min-w-fit">
+      <div className="grid grid-cols-[1fr_1000px_1fr]">
+        <div className=''></div>
+        <div className="">
           {props.children}
         </div>
-        <div className='w-1/5 '></div>
+        <div className=''></div>
       </div>
     )
 }
