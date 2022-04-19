@@ -1,5 +1,6 @@
 import Centercolumnlayout from '@/components/centercolumnlayout/centercolumnlayout'
 import Iconcard from '@/components/iconcard/iconcard'
+import { IconCardVariants } from '@/components/iconcard/iconcard'
 import Mainbutton from '@/components/mainbutton/mainbutton'
 import Navbar from '@/components/navbar/navbar'
 import Secondarybutton from '@/components/secondarybutton/secondarybutton'
@@ -9,6 +10,7 @@ import type { NextPage } from 'next'
 
 
 import { LightBulbIcon, AdjustmentsIcon, PuzzleIcon, ClipboardCheckIcon, HeartIcon, KeyIcon, BriefcaseIcon } from '@heroicons/react/outline'
+
 
 const Home: NextPage = () => {
   return (
@@ -39,10 +41,10 @@ Zusätzlich erhaltet ihr auf unserer Lernplattform ein Jahr lang:
 
       <Centercolumnlayout>
         <div className='flex gap-5'>
-          <Iconcard icon={<LightBulbIcon />} title='Evidenzbasiert' text='Die ergotherapeutischen Inhalte unserer Module sind wissenschaftlich fundiert und werden regelmäßig auf ihre Aktualität überprüft.' alignment='col' />
-          <Iconcard icon={<AdjustmentsIcon />} title='Flexibel' text='Ihr könnt jederzeit und überall auf unsere Module zugreifen. Ergo Unterwegs passt flexibel in euren Berufsalltag.' alignment='col' />
-          <Iconcard icon={<PuzzleIcon />} title='Nachhaltig' text='Angemeldete Teammitglieder erhalten ein Jahr lang Zugriff auf unsere Module. Unsere persönliche Beratung sorgt für den Theorie-Praxis Transfer.' alignment='col' />
-          <Iconcard icon={<ClipboardCheckIcon />} title='Praxisnah' text='Unsere Module sind speziell von Ergotherapeutinnen für Ergotherapeut: innen entwickelt. Daher stellen wir sicher, dass alle Inhalte praxisnah gestaltet sind.' alignment='col' />
+          <Iconcard icon={<LightBulbIcon />} title='Evidenzbasiert' text='Die ergotherapeutischen Inhalte unserer Module sind wissenschaftlich fundiert und werden regelmäßig auf ihre Aktualität überprüft.' variant={IconCardVariants.VERTICAL} />
+          <Iconcard icon={<AdjustmentsIcon />} title='Flexibel' text='Ihr könnt jederzeit und überall auf unsere Module zugreifen. Ergo Unterwegs passt flexibel in euren Berufsalltag.' variant={IconCardVariants.VERTICAL} />
+          <Iconcard icon={<PuzzleIcon />} title='Nachhaltig' text='Angemeldete Teammitglieder erhalten ein Jahr lang Zugriff auf unsere Module. Unsere persönliche Beratung sorgt für den Theorie-Praxis Transfer.' variant={IconCardVariants.VERTICAL} />
+          <Iconcard icon={<ClipboardCheckIcon />} title='Praxisnah' text='Unsere Module sind speziell von Ergotherapeutinnen für Ergotherapeut: innen entwickelt. Daher stellen wir sicher, dass alle Inhalte praxisnah gestaltet sind.' variant={IconCardVariants.VERTICAL} />
         </div>
       </Centercolumnlayout>
 
@@ -51,8 +53,8 @@ Zusätzlich erhaltet ihr auf unserer Lernplattform ein Jahr lang:
           <div>
             <Textblock title='Unsere Module' text='Wir bieten euch über unsere Online-Module innovative und flexible Werkzeuge, um in eurer Praxis betätigungsorientiert, klientenzentriert und evidenzbasiert zu arbeiten.
 Macht euch gemeinsam mit eurem Team auf den Weg!' alignment='left' />
-            <Iconcard icon={<HeartIcon />} title='Basismodule' text='' alignment='col' />
-            <Iconcard icon={<KeyIcon />} title='Vertiefungsmodule' text='' alignment='col' />
+            <Iconcard icon={<HeartIcon />} title='Basismodule' text='' variant={IconCardVariants.HORIZONTAL} />
+            <Iconcard icon={<KeyIcon />} title='Vertiefungsmodule' text='' variant={IconCardVariants.HORIZONTAL}  />
           </div>
           <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/03/Clip4.jpg' />
         </Twosidelayout>
@@ -89,8 +91,8 @@ Starte noch heute!' alignment='center' />
         <Twosidelayout>
           <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/03/Clip6.jpg' />
           <div className='flex flex-row'>
-            <Iconcard icon={<BriefcaseIcon />} title='Ergotherapeutische Modelle - Grundlagen' text='Modellgeleitetes Arbeiten in der Ergotherapie bringt viele Vorteile - aber auch Komplexität mit sich. Wir gestalten mit euch den Weg von der Theorie bis zur Umsetzung im Praxisalltag!' alignment='center' />
-            <Iconcard icon={<LightBulbIcon />} title='Evidenzbasierung in der Ergotherapie' text='Forschung, fachliche Expertise, ergotherapeutische Leitlinien. Dein Team lernt aktuelle Evidenz in euren Praxisalltag zu integrieren – effektiv, flexibel und zeitsparend.' alignment='center' />
+            <Iconcard icon={<BriefcaseIcon />} title='Ergotherapeutische Modelle - Grundlagen' text='Modellgeleitetes Arbeiten in der Ergotherapie bringt viele Vorteile - aber auch Komplexität mit sich. Wir gestalten mit euch den Weg von der Theorie bis zur Umsetzung im Praxisalltag!' variant={IconCardVariants.VERTICAL} />
+            <Iconcard icon={<LightBulbIcon />} title='Evidenzbasierung in der Ergotherapie' text='Forschung, fachliche Expertise, ergotherapeutische Leitlinien. Dein Team lernt aktuelle Evidenz in euren Praxisalltag zu integrieren – effektiv, flexibel und zeitsparend.' variant={IconCardVariants.VERTICAL} />
           </div>
         </Twosidelayout>
       </Centercolumnlayout>
