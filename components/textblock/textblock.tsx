@@ -1,16 +1,33 @@
 
+export enum TextBlockVariants {
+  CENTER,
+  LEFT,
+}
+
 const Textblock = (props: TextblockProps) => {
 
-    return (
-      <>
-        <h1 className={"font-roboto text-2xl text-[#1a264a] font-semibold text-" + props.alignment}>
-          {props.title}
-        </h1>
-        <p className={"font-roboto text-lg text-[#1a264a] font-semibold text-" + props.alignment}>
-          {props.text}
-        </p>
-      </>
-    )
+  let textalignment = "";
+
+  switch (props.variant) {
+    case TextBlockVariants.CENTER:
+      textalignment = "text-center";
+      break;
+    case TextBlockVariants.LEFT:
+      textalignment = "text-left";
+      break;
+  }
+
+
+  return (
+    <>
+      <h1 className={"font-roboto text-[#1a264a] font-semibold " + textalignment + " " + props.titleTailwindStyling}>
+        {props.title}
+      </h1>
+      <p className={"font-roboto text-[#1a264a] font-semibold " + textalignment + " " + props.textTailwindStyling}>
+        {props.text}
+      </p>
+    </>
+  )
 }
 
 export default Textblock 
