@@ -1,6 +1,4 @@
-interface IconcardProps extends JSX.IntrinsicAttributes {
-    title: string,
-    text: string,
+interface IconcardProps extends JSX.IntrinsicAttributes, TextblockProps {
     icon: any,
     variant: IconCardVariants,
 }
