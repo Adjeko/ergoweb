@@ -7,3 +7,4 @@
 /// <reference path="./twosidelayout/twosidelayout.d.ts" />
 /// <reference path="./textlink/textlink.d.ts" />
 /// <reference path="./navbar/navbar.d.ts" />
+/// <reference path="./footer/footer.d.ts" />
