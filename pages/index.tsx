@@ -10,6 +10,7 @@ import type { NextPage } from 'next'
 
 
 import { LightBulbIcon, AdjustmentsIcon, PuzzleIcon, ClipboardCheckIcon, HeartIcon, KeyIcon, BriefcaseIcon } from '@heroicons/react/outline'
+import Footer from '@/components/footer/footer'
 
 
 const Home: NextPage = () => {
@@ -149,6 +150,8 @@ Wir freuen uns darauf, gemeinsam mit euch unterwegs zu sein!' textTailwindStylin
           <Mainbutton text='Kontaktiere uns' href='/' />
         </div>
       </Twosidelayout>
+
+      <Footer/>
     </>
   )
 }
