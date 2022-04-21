@@ -83,47 +83,69 @@ Macht euch gemeinsam mit eurem Team auf den Weg!' textTailwindStyling='text-base
       </div>
 
       <Twosidelayout>
-        <div className='h-max'>
-          <Textblock title='Ergotherapie im Wandel' text='Die Wissensbasis der Ergotherapie wird ständig erweitert und verändert. Wir alle wollen unseren Klient:innen die bestmögliche Therapie anbieten. Aber wie kann man da im stressigen Praxisalltag auf dem Laufenden bleiben?
-Wir haben uns die Theorie hinter der Praxis angeschaut und stellen euch unsere Lösungen vor!' variant={TextBlockVariants.CENTER} />
+        <div className='mx-24 my-20 h-max'>
+          <Textblock title='Ergotherapie im Wandel' titleTailwindStyling='text-3xl mb-8'
+            text='Die Wissensbasis der Ergotherapie wird ständig erweitert und verändert. Wir alle wollen unseren Klient:innen die bestmögliche Therapie anbieten. Aber wie kann man da im stressigen Praxisalltag auf dem Laufenden bleiben?
+Wir haben uns die Theorie hinter der Praxis angeschaut und stellen euch unsere Lösungen vor!' textTailwindStyling='text-base mr-24'
+            variant={TextBlockVariants.LEFT} />
         </div>
         <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/03/VertiefungBeratung1-2048x1365.jpg' />
       </Twosidelayout>
 
       <Centercolumnlayout>
         <Twosidelayout>
-          <div>
-            <Textblock title='Über uns' text='Wir, Sarah und Sara, sind Ergotherapeutinnen mit langjähriger Erfahrung in ambulanten Praxen und begleiten dein Team auf dem Weg zu mehr Klientenzentrierung, Betätigungsorientierung und Evidenzbasierung. Durch unser Studium und das Gestalten unseres ersten gemeinsamen Change-Prozesses gelang es uns, diese Werte zu vertiefen und praxisnahe Strategien zu entwickeln, die wir mit euch teilen möchten.
+          <div className='my-24'>
+            <Textblock title='Über uns' titleTailwindStyling='text-3xl mb-8'
+              text='Wir, Sarah und Sara, sind Ergotherapeutinnen mit langjähriger Erfahrung in ambulanten Praxen und begleiten dein Team auf dem Weg zu mehr Klientenzentrierung, Betätigungsorientierung und Evidenzbasierung. Durch unser Studium und das Gestalten unseres ersten gemeinsamen Change-Prozesses gelang es uns, diese Werte zu vertiefen und praxisnahe Strategien zu entwickeln, die wir mit euch teilen möchten.
 Wir sind fest davon überzeugt, dass wir alle im Team mehr erreichen können. In unseren Online-Module bieten wir euch deshalb nicht nur ergotherapeutisches Fachwissen auf dem neuesten Stand der Forschung, sondern geben euch auch das Handwerkszeug, diese Inhalte in euren Praxisalltag zu übertragen.
-Wir freuen uns darauf, gemeinsam mit euch unterwegs zu sein!' variant={TextBlockVariants.CENTER} />
+Wir freuen uns darauf, gemeinsam mit euch unterwegs zu sein!' textTailwindStyling='text-base mr-24 mb-8'
+              variant={TextBlockVariants.LEFT} />
             <Mainbutton text='Erfahre mehr über uns' href='/' />
           </div>
-          <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/03/VertiefungBeratung1-2048x1365.jpg' />
+          <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/03/VertiefungBeratung1-2048x1365.jpg' className='' />
         </Twosidelayout>
       </Centercolumnlayout>
 
-      <Centercolumnlayout>
-        <Textblock title='Sichere dir unser kostenloses Startmodul!' text='Lerne uns ganz kostenlos und unverbindlich im Startmodul kennen.
-Starte noch heute!' variant={TextBlockVariants.CENTER} />
-        <Secondarybutton text='Jetzt kostenlos buchen!' href='' />
-      </Centercolumnlayout>
-
-      <Centercolumnlayout>
-        <Textblock title='Lerne unsere Module kennen' text='' variant={TextBlockVariants.CENTER} />
-        <Twosidelayout>
-          <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/03/Clip6.jpg' />
-          <div className='flex flex-row'>
-            <Iconcard icon={<BriefcaseIcon />} title='Ergotherapeutische Modelle - Grundlagen' text='Modellgeleitetes Arbeiten in der Ergotherapie bringt viele Vorteile - aber auch Komplexität mit sich. Wir gestalten mit euch den Weg von der Theorie bis zur Umsetzung im Praxisalltag!' variant={IconCardVariants.VERTICAL} />
-            <Iconcard icon={<LightBulbIcon />} title='Evidenzbasierung in der Ergotherapie' text='Forschung, fachliche Expertise, ergotherapeutische Leitlinien. Dein Team lernt aktuelle Evidenz in euren Praxisalltag zu integrieren – effektiv, flexibel und zeitsparend.' variant={IconCardVariants.VERTICAL} />
+      <div className='bg-blue-200'>
+        <Centercolumnlayout>
+          <div className='my-16'>
+            <Textblock title='Sichere dir unser kostenloses Startmodul!' titleTailwindStyling='text-3xl mb-8'
+              text='Lerne uns ganz kostenlos und unverbindlich im Startmodul kennen. Starte noch heute!' textTailwindStyling='text-base mb-6'
+              variant={TextBlockVariants.CENTER} />
+            <div className='grid place-items-center'>
+              <Secondarybutton text='Jetzt kostenlos buchen!' href='' />
+            </div>
           </div>
-        </Twosidelayout>
+        </Centercolumnlayout>
+      </div>
+
+      <Centercolumnlayout>
+        <div className='mb-24'>
+        <div className='mb-12 mt-36'>
+          <Textblock title='Lerne unsere Module kennen' titleTailwindStyling='text-3xl' text='' variant={TextBlockVariants.CENTER} />
+        </div>
+          <Twosidelayout>
+            <div className='grid place-items-center'>
+              <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/03/Clip6.jpg' />
+            </div>
+            <div className='grid grid-cols-2'>
+              <Iconcard icon={<BriefcaseIcon />} title='Ergotherapeutische Modelle - Grundlagen' titleTailwindStyling='text-2xl mb-4'
+                                                 text='Modellgeleitetes Arbeiten in der Ergotherapie bringt viele Vorteile - aber auch Komplexität mit sich. Wir gestalten mit euch den Weg von der Theorie bis zur Umsetzung im Praxisalltag!' textTailwindStyling='text-base'
+                                                 variant={IconCardVariants.VERTICAL} />
+              <Iconcard icon={<LightBulbIcon />} title='Evidenzbasierung in der Ergotherapie' titleTailwindStyling='text-2xl mb-4'
+                                                 text='Forschung, fachliche Expertise, ergotherapeutische Leitlinien. Dein Team lernt aktuelle Evidenz in euren Praxisalltag zu integrieren – effektiv, flexibel und zeitsparend.' textTailwindStyling='text-base'
+                                                 variant={IconCardVariants.VERTICAL} />
+            </div>
+          </Twosidelayout>
+        </div>
       </Centercolumnlayout>
 
       <Twosidelayout>
         <img src='https://ergo-unterwegs.de/wp-content/uploads/2021/02/965a5cb6-7a8c-48bc-9b6c-b2d995ab43cd.jpg' />
-        <div>
-          <Textblock title='Interessiert?' text='Schreibt uns einfach über das Kontaktformular! 
-Wir freuen uns, von euch zu hören!' variant={TextBlockVariants.CENTER} />
+        <div className='flex flex-col justify-center h-full mx-24'>
+          <Textblock title='Interessiert?' titleTailwindStyling='text-3xl mb-8'
+                     text='Schreibt uns einfach über das Kontaktformular! Wir freuen uns, von euch zu hören!' textTailwindStyling='text-base mb-8'
+                     variant={TextBlockVariants.LEFT} />
           <Mainbutton text='Kontaktiere uns' href='/' />
         </div>
       </Twosidelayout>

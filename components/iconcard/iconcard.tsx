@@ -13,11 +13,11 @@ const Iconcard = (props: IconcardProps) => {
 
   switch (props.variant) {
     case IconCardVariants.HORIZONTAL:
-      gridclasses = "grid grid-cols-[min-content_auto] place-items-start  items-center";
+      gridclasses = "grid grid-cols-[min-content_auto] place-items-start items-center";
       text = "";
       break;
     case IconCardVariants.VERTICAL:
-      gridclasses = "grid grid-rows-[min-content_min-content_auto]  place-items-center";
+      gridclasses = "grid grid-rows-[min-content_min-content_auto] place-items-center";
       text = props.text;
       break;
   }
