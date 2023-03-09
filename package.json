@@ -1,39 +1,24 @@
 {
-  "name": "ergoweb",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "plop": "plop"
-  },
-  "dependencies": {
-    "@heroicons/react": "^1.0.6",
-    "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@storybook/addon-actions": "^6.4.21",
-    "@storybook/addon-essentials": "^6.4.21",
-    "@storybook/addon-interactions": "^6.4.21",
-    "@storybook/addon-links": "^6.4.21",
-    "@storybook/react": "^6.4.21",
-    "@storybook/testing-library": "^0.0.9",
-    "@types/node": "^17.0.23",
-    "@types/react": "18.0.4",
-    "autoprefixer": "^10.4.4",
-    "babel-loader": "^8.2.4",
-    "eslint": "8.13.0",
-    "eslint-config-next": "12.1.5",
-    "plop": "^3.0.5",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24",
-    "typescript": "4.6.3"
-  }
+	"name": "",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^3.1.0",
+		"@storyblok/astro": "^2.0.10",
+		"astro": "^2.1.2",
+		"tailwindcss": "^3.2.7",
+		"vite": "^4.1.4"
+	},
+	"devDependencies": {
+		"stripe": "^11.13.0",
+		"svelte-stripe": "^0.0.22"
+	}
 }
