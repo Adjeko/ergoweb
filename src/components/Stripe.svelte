@@ -22,9 +22,9 @@
       },
       body: JSON.stringify({})
     })
-    console.log(response)
+    
     const { clientSecret } = await response.json()
-    console.log(clientSecret)
+    
     return clientSecret
   }
 
@@ -33,8 +33,8 @@
 </script>
 
 {#if stripe  && clientSecret}
+
 <p>Stripe LOADED</p>
-<div class="w-screen">
 <Elements 
   {stripe} 
   {clientSecret}
@@ -57,7 +57,7 @@
     </button>
   </form>
 </Elements>
-</div>
+
 {:else}
 <p>Stripe LOADING...</p>
 {/if}
