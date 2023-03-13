@@ -1,0 +1,9 @@
+---
+import { storyblokEditable } from '@storyblok/astro';
+import Stripe from '../components/Stripe.svelte'
+
+const { blok } = Astro.props
+---
+
+<p class="text-red-500">STRIPE</p>
+<Stripe client:load></Stripe>

@@ -2,7 +2,10 @@ import { defineConfig } from 'astro/config';
 import storyblok from '@storyblok/astro';
 import { loadEnv } from 'vite';
 import tailwind from "@astrojs/tailwind";
+import svelte from "@astrojs/svelte";
+import node from "@astrojs/node";
 const env = loadEnv("", process.cwd(), 'STORYBLOK');
+
 
 // https://astro.build/config
 
@@ -15,7 +18,8 @@ export default defineConfig({
       feature: "storyblok/Feature",
       grid: "storyblok/Grid",
       teaser: "storyblok/Teaser",
-      hero: "storyblok/Hero"
+      hero: "storyblok/Hero",
+      stripe: "storyblok/Stripe"
     },
     apiOptions: {
       // Choose your Storyblok space region
@@ -25,6 +29,10 @@ export default defineConfig({
     bridge: true,
     apiOptions: {},
     // storyblok-js-client options
-    useCustomApi: false
-  }), tailwind()]
+    useCustomApi: false,
+  }), tailwind(), svelte()],
+  // output: "server",
+  // adapter: node({
+  //   mode: "standalone"
+  // })
 });
