@@ -6,9 +6,6 @@ import svelte from "@astrojs/svelte";
 import node from "@astrojs/node";
 const env = loadEnv("", process.cwd(), 'STORYBLOK');
 
-
-// https://astro.build/config
-
 // https://astro.build/config
 export default defineConfig({
   integrations: [storyblok({
@@ -19,7 +16,11 @@ export default defineConfig({
       grid: "storyblok/Grid",
       teaser: "storyblok/Teaser",
       hero: "storyblok/Hero",
-      stripe: "storyblok/Stripe"
+      stripe: "storyblok/Stripe",
+      pocketbase: "storyblok/Pocketbase",
+      button: "storyblok/Button",
+      TextWithImage: "storyblok/TextWithImage",
+      TextBlock: "storyblok/TextBlock",
     },
     apiOptions: {
       // Choose your Storyblok space region
