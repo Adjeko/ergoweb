@@ -19,7 +19,6 @@ export default defineConfig({
       teaser: "storyblok/Teaser",
       hero: "storyblok/Hero",
       stripe: "storyblok/Stripe",
-      pocketbase: "storyblok/Pocketbase",
       button: "storyblok/Button",
       TextWithImage: "storyblok/TextWithImage",
       TextBlock: "storyblok/TextBlock"
