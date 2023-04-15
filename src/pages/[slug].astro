@@ -2,6 +2,8 @@
 export const prerender = true;
 import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import Navbar from "../components/client/Navbar.jsx";
+import SignUpDialog from "../components/client/SignUpDialog.jsx";
 
 export async function getStaticPaths() {
   const storyblokApi = useStoryblokApi();
@@ -13,7 +15,6 @@ export async function getStaticPaths() {
   links = Object.values(links);
 
   links = links.filter((link : any) => link.is_folder == false && link.parent_id == null);
-  debugger;
   return links.map((link : any) => {
     return {
       params: { slug: link.slug },
@@ -24,11 +25,12 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 const storyblokApi = useStoryblokApi();
-debugger;
 const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
   version: "draft",
 });
 const story = data.story;
 
 ---
+<Navbar client:only="react"></Navbar>
+<SignUpDialog client:only="react"></SignUpDialog>
 <StoryblokComponent blok={story.content} />

@@ -1,33 +1,12 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { PlusIcon } from '@heroicons/react/20/solid'
-import PocketBase from 'pocketbase'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function onLogin(){
-
-  let records
-  const authData = pb.collection('users').authWithPassword('test@example.com', '12345678')
-    .then(() => {
-      records = pb.collection('test').getFullList({
-      sort: '-created',
-    }); 
-  });  
-}
-
-function onLogout(){
-  pb.authStore.clear();
-}
-
-const pb = new PocketBase('http://167.86.93.112:8090');
-
 export default function Example() {
-
-  
 
   return (
     <Disclosure as="nav" className="bg-white shadow">
@@ -89,21 +68,13 @@ export default function Example() {
               </div>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  {pb.authStore.isValid ? <button
+                  <button
                     type="button"
-                    onClick={onLogin()}
+                    onClick={() => {}}
                     className="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Login
-                  </button> : 
-                  <button
-                  type="button"
-                  onClick={onLogout()}
-                  className="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  LogOut
-                </button>}
-                  
+                  </button>                   
                 </div>
                 <div className="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center">
                   <button
