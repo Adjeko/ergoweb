@@ -30,5 +30,6 @@ const { data } = await storyblokApi.get(`cdn/stories/module/${slug}`, {
 
 const story = data.story;
 ---
-<p>MODULE</p>
+
+
 <StoryblokComponent blok={story.content} />

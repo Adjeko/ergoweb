@@ -4,7 +4,9 @@ import { loadEnv } from 'vite';
 import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
 import node from "@astrojs/node";
+import react from "@astrojs/react";
 const env = loadEnv("", process.cwd(), 'STORYBLOK');
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,7 +22,7 @@ export default defineConfig({
       pocketbase: "storyblok/Pocketbase",
       button: "storyblok/Button",
       TextWithImage: "storyblok/TextWithImage",
-      TextBlock: "storyblok/TextBlock",
+      TextBlock: "storyblok/TextBlock"
     },
     apiOptions: {
       // Choose your Storyblok space region
@@ -30,10 +32,10 @@ export default defineConfig({
     bridge: true,
     apiOptions: {},
     // storyblok-js-client options
-    useCustomApi: false,
-  }), tailwind(), svelte()],
-  // output: "server",
-  // adapter: node({
-  //   mode: "standalone"
-  // })
+    useCustomApi: false
+  }), tailwind(), svelte(), react()],
+  output: "server",
+  adapter: node({
+    mode: "standalone"
+  })
 });

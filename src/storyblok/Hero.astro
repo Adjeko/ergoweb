@@ -15,7 +15,7 @@ const { blok } = Astro.props
         {blok.text}
       </p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        {blok.buttons.map((button : any) => <StoryblokComponent blok={button}/>)}
+        {blok.buttons ? blok.buttons.map((button : any) => <StoryblokComponent blok={button}/>) : <div/>}
       </div>
     </div>
   </div>

@@ -29,6 +29,15 @@ const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
 });
 
 const story = data.story;
+
+let cookie = Astro.request;
+console.log(Astro.cookies.get('test'))
+Astro.cookies.set('test','herbert');
+
+
 ---
 
+
+<p>Received a {Astro.request.method} request to "{Astro.request.url}".</p>
+<p>Received request headers: <code>{JSON.stringify(Object.fromEntries(Astro.request.headers))}</code></p>
 <StoryblokComponent blok={story.content} />

@@ -1,5 +1,5 @@
 {
-	"name": "",
+	"name": "ergotest",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -8,15 +8,25 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
+		"proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
+		"cookie": "astro build && node .\\dist\\server\\entry.mjs"
 	},
 	"dependencies": {
-		"@astrojs/node": "^5.1.0",
+		"@astrojs/node": "^5.1.1",
+		"@astrojs/react": "^2.1.0",
 		"@astrojs/svelte": "^2.1.0",
 		"@astrojs/tailwind": "^3.1.0",
+		"@headlessui/react": "^1.7.13",
+		"@heroicons/react": "^2.0.16",
+		"@nanostores/persistent": "^0.7.0",
 		"@storyblok/astro": "^2.0.10",
-		"astro": "^2.1.2",
+		"@types/react": "^18.0.30",
+		"@types/react-dom": "^18.0.11",
+		"astro": "^2.3.0",
+		"nanostores": "^0.7.4",
 		"pocketbase": "^0.12.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"svelte": "^3.56.0",
 		"tailwindcss": "^3.2.7",
 		"vite": "^4.1.4"
