@@ -9,7 +9,7 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
-		"cookie": "astro build && node .\\dist\\server\\entry.mjs"
+		"ssr": "astro build && node .\\dist\\server\\entry.mjs"
 	},
 	"dependencies": {
 		"@astrojs/node": "^5.1.1",

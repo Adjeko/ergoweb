@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
@@ -11,8 +12,8 @@ export async function getStaticPaths() {
   let links = data.links;
   links = Object.values(links);
 
-  links = links.filter((link : any) => !link.slug.includes("/"));
-
+  links = links.filter((link : any) => link.is_folder == false && link.parent_id == null);
+  debugger;
   return links.map((link : any) => {
     return {
       params: { slug: link.slug },
@@ -23,21 +24,11 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 const storyblokApi = useStoryblokApi();
-
+debugger;
 const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
   version: "draft",
 });
-
 const story = data.story;
 
-let cookie = Astro.request;
-console.log(Astro.cookies.get('test'))
-Astro.cookies.set('test','herbert');
-
-
 ---
-
-
-<p>Received a {Astro.request.method} request to "{Astro.request.url}".</p>
-<p>Received request headers: <code>{JSON.stringify(Object.fromEntries(Astro.request.headers))}</code></p>
 <StoryblokComponent blok={story.content} />
