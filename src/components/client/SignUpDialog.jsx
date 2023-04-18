@@ -3,6 +3,7 @@ import { Dialog } from '@headlessui/react'
 import { useForm } from "react-hook-form";
 import { useStore } from '@nanostores/react';
 import { isLoginDialogOpen } from '../../stores/authenticationStore';
+import { signUpWithPassword } from '../../services/authentication';
 
 export default function SignUpDialog() {
 
@@ -15,10 +16,14 @@ export default function SignUpDialog() {
 
   function onSignup(data) {
     console.log(JSON.stringify(data))
+    signUpWithPassword(data.signupEmail, data.signupPassword);
+    isLoginDialogOpen.set(false);
   }
 
   function onLogin(data) {
     console.log(JSON.stringify(data))
+
+    isLoginDialogOpen.set(false);
   }
 
   function login(){
@@ -130,7 +135,7 @@ export default function SignUpDialog() {
                     Email Addresse
                   </label>
                   <div className="mt-2">
-                    <input {...register("signup-email")}
+                    <input {...register("signupEmail")}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -141,7 +146,7 @@ export default function SignUpDialog() {
                     Passwort
                   </label>
                   <div className="mt-2">
-                    <input {...register("signup-password")}
+                    <input {...register("signupPassword")}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -152,7 +157,7 @@ export default function SignUpDialog() {
                     Passwort wiederholen
                   </label>
                   <div className="mt-2">
-                    <input {...register("signup-password-repeat")}
+                    <input {...register("signupPasswordRepeat")}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>

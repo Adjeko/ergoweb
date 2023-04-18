@@ -1,15 +1,33 @@
 import PocketBase from 'pocketbase';
+import Cookies from 'js-cookie';
 
 const pocketBaseAddress = 'http://167.86.93.112:8090';
 
 const pb = new PocketBase(pocketBaseAddress);
 
-// new sign up or login with credentials
+
+export function signUpWithPassword(username: string, password: string){
+  const data = {
+    "username": username.split('@')[0],
+    "email": username,
+    "emailVisibility": true,
+    "password": password,
+    "passwordConfirm": password,
+    "name": username.split('@')[0]
+  };
+
+  pb.collection('users').create(data)
+  .then(() => {
+    loginWithPassword(username, password);
+  });
+}
+
+// login with credentials
 export function loginWithPassword(username: string, password: string){
   pb.collection('users').authWithPassword(username, password)
   .then(() => {
     if(pb.authStore.isValid) {
-      document.cookie = pb.authStore.exportToCookie({ path:'/', domain: 'localhost', httpOnly: false});
+      document.cookie = pb.authStore.exportToCookie({ path:'/', domain: 'localhost', httpOnly: false, secure: false});
     }
   });
 }
@@ -26,6 +44,8 @@ export function ssrIsCookieValid(){
 // logout from current session
 export function logout(){
   pb.authStore.clear();
+
+  Cookies.remove('pb_auth');
 }
 
 // check if pocketbase isValid, instantiate if not
