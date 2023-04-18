@@ -24,6 +24,7 @@ export function signUpWithPassword(username: string, password: string){
 
 // login with credentials
 export function loginWithPassword(username: string, password: string){
+  pb.authStore.clear();
   pb.collection('users').authWithPassword(username, password)
   .then(() => {
     if(pb.authStore.isValid) {
@@ -34,7 +35,9 @@ export function loginWithPassword(username: string, password: string){
 
 // try to get a session from cookie or refresh auth
 export function loginFromCookie(){
-
+  let sessionCookie = Cookies.get('pb_auth');
+  pb.authStore.loadFromCookie('pb_auth=' + sessionCookie);
+  console.log(pb.authStore.isValid);
 }
 
 export function ssrIsCookieValid(){
@@ -51,4 +54,8 @@ export function logout(){
 // check if pocketbase isValid, instantiate if not
 function checkPocketbaseStore(){
 
+}
+
+export function TestSession(){
+  return pb.authStore.isValid + '\n' + pb.authStore.model?.email;
 }

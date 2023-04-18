@@ -3,7 +3,7 @@ import { Dialog } from '@headlessui/react'
 import { useForm } from "react-hook-form";
 import { useStore } from '@nanostores/react';
 import { isLoginDialogOpen } from '../../stores/authenticationStore';
-import { signUpWithPassword } from '../../services/authentication';
+import { signUpWithPassword, loginWithPassword } from '../../services/authentication';
 
 export default function SignUpDialog() {
 
@@ -22,7 +22,7 @@ export default function SignUpDialog() {
 
   function onLogin(data) {
     console.log(JSON.stringify(data))
-
+    loginWithPassword(data.loginEmail, data.loginPassword);
     isLoginDialogOpen.set(false);
   }
 
@@ -54,7 +54,7 @@ export default function SignUpDialog() {
                     Email Addresse
                   </label>
                   <div className="mt-2">
-                    <input {...register("login-email")}
+                    <input {...register("loginEmail")}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -65,7 +65,7 @@ export default function SignUpDialog() {
                     Passwort
                   </label>
                   <div className="mt-2">
-                    <input {...register("login-password")}
+                    <input {...register("loginPassword")}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -73,7 +73,7 @@ export default function SignUpDialog() {
   
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <input {...register("login-remember")}
+                    <input {...register("loginRemember")}
                       type="checkbox"
                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                     />

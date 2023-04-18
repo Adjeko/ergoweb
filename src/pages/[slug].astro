@@ -4,6 +4,7 @@ import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import Navbar from "../components/client/Navbar.jsx";
 import SignUpDialog from "../components/client/SignUpDialog.jsx";
+import LoginTest from "../components/client/LoginTest.svelte";
 
 export async function getStaticPaths() {
   const storyblokApi = useStoryblokApi();
@@ -36,4 +37,5 @@ const story = data.story;
 <!-- <div class="blur-sm"> -->
   <Navbar client:only="react"></Navbar>
   <StoryblokComponent blok={story.content} />
+  <LoginTest client:only="svelte"></LoginTest>
 <!-- </div> -->
