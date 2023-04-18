@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useStore } from '@nanostores/react';
+import { isLoginDialogOpen } from '../../stores/authenticationStore';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -70,7 +72,7 @@ export default function Example() {
                 <div className="flex-shrink-0">
                   <button
                     type="button"
-                    onClick={() => {}}
+                    onClick={() => {isLoginDialogOpen.set(true)}}
                     className="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Login

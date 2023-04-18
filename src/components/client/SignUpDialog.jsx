@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { useForm } from "react-hook-form";
+import { useStore } from '@nanostores/react';
+import { isLoginDialogOpen } from '../../stores/authenticationStore';
 
 export default function SignUpDialog() {
 
-  let [isOpen, setIsOpen] = useState(true)
+  const _isLoginDialogOpen = useStore(isLoginDialogOpen);
 
   // if false then it is signUp
   let [isLogin, setIsLogin] = useState(true)
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   function onSignup(data) {
     console.log(JSON.stringify(data))
@@ -174,7 +176,7 @@ export default function SignUpDialog() {
   }
 
   return (
-    <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+    <Dialog open={_isLoginDialogOpen} onClose={() => isLoginDialogOpen.set(!_isLoginDialogOpen)}>
 
       {/* The backdrop, rendered as a fixed sibling to the panel container */}
       <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
