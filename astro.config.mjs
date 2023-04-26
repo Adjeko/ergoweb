@@ -21,7 +21,8 @@ export default defineConfig({
       stripe: "storyblok/Stripe",
       button: "storyblok/Button",
       TextWithImage: "storyblok/TextWithImage",
-      TextBlock: "storyblok/TextBlock"
+      TextBlock: "storyblok/TextBlock",
+      Buying: "storyblok/Buying",
     },
     apiOptions: {
       // Choose your Storyblok space region
