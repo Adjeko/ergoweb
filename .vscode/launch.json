@@ -3,7 +3,7 @@
   "configurations": [
 
     {
-      "command": "./node_modules/.bin/astro dev",
+      "command": "./astro/node_modules/.bin/astro dev",
       "name": "Development server",
       "request": "launch",
       "type": "node-terminal"
@@ -15,7 +15,7 @@
       "type": "node-terminal"
      },
      {
-      "command": "npm run build",
+      "command": "cd astro && npm run build",
       "name": "Build",
       "request": "launch",
       "type": "node-terminal"

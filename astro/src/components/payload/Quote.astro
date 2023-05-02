@@ -1,0 +1,12 @@
+---
+
+interface Props {
+  quote: any,
+}
+
+const { quote } = Astro.props;
+
+---
+
+
+<p>{JSON.stringify(quote)}</p>

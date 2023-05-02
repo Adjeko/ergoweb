@@ -10,30 +10,7 @@ const env = loadEnv("", process.cwd(), 'STORYBLOK');
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [storyblok({
-    accessToken: env.STORYBLOK_TOKEN,
-    components: {
-      page: "storyblok/Page",
-      feature: "storyblok/Feature",
-      grid: "storyblok/Grid",
-      teaser: "storyblok/Teaser",
-      hero: "storyblok/Hero",
-      stripe: "storyblok/Stripe",
-      button: "storyblok/Button",
-      TextWithImage: "storyblok/TextWithImage",
-      TextBlock: "storyblok/TextBlock",
-      Buying: "storyblok/Buying",
-    },
-    apiOptions: {
-      // Choose your Storyblok space region
-      region: 'eu' // optional,  or 'eu' (default)
-    },
-
-    bridge: true,
-    apiOptions: {},
-    // storyblok-js-client options
-    useCustomApi: false
-  }), tailwind(), svelte(), react()],
+  integrations: [tailwind(), svelte(), react()],
   output: "server",
   adapter: node({
     mode: "standalone"

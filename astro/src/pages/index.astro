@@ -1,12 +1,28 @@
 ---
+import Navbar from "../components/client/Navbar.jsx";
+import SignUpDialog from "../components/client/SignUpDialog.jsx";
+import Page from "../components/payload/Page.astro";
+import { getPages } from "../services/payload.js";
 
-
+const data = await getPages();
+const pages = data.docs;
 ---
+
+
 <html lang="en">
   <head>
     <title>Storyblok & Astro</title>
   </head>
   <body>
+    <SignUpDialog client:only="react"></SignUpDialog>
+    <Navbar client:only="react"></Navbar>
     <p>Hallo Welt</p>
+
+    {pages.map((page) => (
+      
+      <Page page={page}></Page>
+
+    ))}
+
   </body>
 </html>

@@ -1,0 +1,20 @@
+---
+import type { Page } from '../../../../payload/src/payload-types';
+import Quote from './Quote.astro';
+
+interface Props {
+  page: Page,
+}
+
+const { page } = Astro.props;
+
+---
+
+
+<p>{JSON.stringify(page.Titel)}</p>
+
+{page.layout?.map((block) => (
+      
+  <Quote quote={block}></Quote>
+
+))}
