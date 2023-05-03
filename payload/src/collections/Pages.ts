@@ -1,23 +1,6 @@
-import { Block, CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload/types';
+import { HeroBlock } from '../blocks/HeroBlock';
 
-const QuoteBlock: Block = {
-  slug: 'Quote', // required
-  imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgxWKuOaUfCbVLf_INH78QXBZ5KR2lELni3wsQCL5fMChxjwah_7Kd08j6p1PXtfgZ93w&usqp=CAU',
-  imageAltText: 'A nice thumbnail image to show what this block looks like',
-  fields: [ // required
-    {
-      name: 'quoteHeader',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'quoteText',
-      type: 'text',
-    },
-  ]
-};
-
-// Example Collection - For reference only, this must be added to payload.config.ts to be used.
 const Pages: CollectionConfig = {
   slug: 'pages',
   access:{
@@ -55,7 +38,7 @@ const Pages: CollectionConfig = {
               minRows: 1,
               maxRows: 20,
               blocks: [ 
-                QuoteBlock
+                HeroBlock
               ]
             }
           ],

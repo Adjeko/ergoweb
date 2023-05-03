@@ -28,11 +28,18 @@ export interface Page {
   Name?: string;
   Titel: string;
   layout?: {
-    quoteHeader: string;
-    quoteText?: string;
+    Titel: string;
+    Beschreibung?: string;
+    Buttons?: {
+      Text: string;
+      Link: string;
+      id?: string;
+      blockName?: string;
+      blockType: 'Button';
+    }[];
     id?: string;
     blockName?: string;
-    blockType: 'Quote';
+    blockType: 'Hero';
   }[];
   createdAt: string;
   updatedAt: string;
