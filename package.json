@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "astro:init": "cd ./astro && npm install",
-    "astro:dev": "cd ./astro && npm run dev",
-    "payload:init": "cd ./payload && npm install",
-    "payload:dev": "cd ./payload && npm run dev"
+    "astro:init": "cd ./astro && pnpm install",
+    "astro:dev": "cd ./astro && pnpm dev",
+    "payload:init": "cd ./payload && pnpm install",
+    "payload:dev": "cd ./payload && pnpm dev",
+    "payload:build": "cd ./payload && pnpm build"
   },
   "repository": {
     "type": "git",
