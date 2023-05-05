@@ -27,13 +27,29 @@ export interface Page {
   id: string;
   title: string;
   slug: string;
-  content?: {
-    text: string;
-    link: string;
-    id?: string;
-    blockName?: string;
-    blockType: 'Button';
-  }[];
+  content?: (
+    | {
+        text: string;
+        link: string;
+        id?: string;
+        blockName?: string;
+        blockType: 'Button';
+      }
+    | {
+        title: string;
+        text: string;
+        buttons?: {
+          text: string;
+          link: string;
+          id?: string;
+          blockName?: string;
+          blockType: 'Button';
+        }[];
+        id?: string;
+        blockName?: string;
+        blockType: 'Text';
+      }
+  )[];
   createdAt: string;
   updatedAt: string;
 }

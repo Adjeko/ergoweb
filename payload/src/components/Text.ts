@@ -1,4 +1,5 @@
 import { Block } from 'payload/types';
+import { Button } from './Button';
 
 export const Text: Block = {
     slug: 'Text', // required
@@ -6,14 +7,25 @@ export const Text: Block = {
     // imageAltText: 'A nice thumbnail image to show what this block looks like',
     fields: [ // required
       {
-        name: 'Text',
+        name: 'title',
+        label: 'Titel',
         type: 'text',
         required: true,
       },
       {
-        name: 'Link',
+        name: 'text',
+        label: 'Text',
         type: 'text',
         required: true,
+      },
+      {
+        name: 'buttons',
+        label: 'Buttons',
+        type: 'blocks',
+        maxRows: 2,
+        blocks: [ 
+          Button
+        ]
       },
     ]
   };

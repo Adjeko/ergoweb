@@ -1,5 +1,6 @@
 import { CollectionConfig } from 'payload/types';
 import { Button } from '../components/Button';
+import { Text } from '../components/Text';
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -40,7 +41,8 @@ const Pages: CollectionConfig = {
               label: 'Inhalt',
               type: 'blocks',
               blocks: [ 
-                Button
+                Button,
+                Text
               ]
             }
           ],

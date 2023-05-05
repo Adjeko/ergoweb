@@ -1,6 +1,6 @@
 ---
 import Button from './components/Button.astro';
-
+import Text from './components/Text.astro';
 
 interface Props {
   block: any,
@@ -13,5 +13,11 @@ const { block } = Astro.props;
 {block.blockType == "Button" &&
 <>
   <Button block={block}></Button>
+</>
+}
+
+{block.blockType == "Text" &&
+<>
+  <Text block={block}></Text>
 </>
 }
