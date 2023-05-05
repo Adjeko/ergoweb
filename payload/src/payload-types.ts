@@ -28,8 +28,8 @@ export interface Page {
   title: string;
   slug: string;
   content?: {
-    Text: string;
-    Link: string;
+    text: string;
+    link: string;
     id?: string;
     blockName?: string;
     blockType: 'Button';

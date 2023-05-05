@@ -1,0 +1,17 @@
+---
+import Button from './components/Button.astro';
+
+
+interface Props {
+  block: any,
+}
+
+const { block } = Astro.props;
+
+---
+
+{block.blockType == "Button" &&
+<>
+  <Button block={block}></Button>
+</>
+}

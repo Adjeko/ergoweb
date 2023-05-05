@@ -38,3 +38,7 @@ export async function getPageBySlug(): Promise<PayloadCollection<Page>> {
   )
   return data
 }
+
+export async function convertBlock() {
+  
+}

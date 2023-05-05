@@ -1,6 +1,6 @@
 ---
 import type { Page } from '../../../../../payload/src/payload-types';
-import Quote from '../Quote.astro';
+import Block from '../Block.astro';
 
 interface Props {
   page: Page | undefined,
@@ -12,14 +12,16 @@ const { page } = Astro.props;
 
 ---
 
-{page && 
+{page ? 
 <>
-  <p>{JSON.stringify(page.title)}</p>
-  
   {page.content?.map((block) => (
-        
-    <Quote quote={block}></Quote>
-  
+
+    <Block block={block}></Block>
+
   ))}
+</>
+:
+<>
+<p>keine Page geladen</p>
 </>
 }
