@@ -23,13 +23,18 @@ async function apiFetch(url: string, options: any = {}) {
   );
 }
 
-export async function getPages(query: any = null): Promise<PayloadCollection<Page>> {
-  const stringifiedQuery = qs.stringify(
-    query,
-    { addQueryPrefix: true }
-  );
+export async function getPages(): Promise<PayloadCollection<Page>> {
+  
   const data = await apiFetch(
-    `http://localhost:3001/api/pages${stringifiedQuery}`
+    `http://localhost:3001/api/pages`
+  )
+  return data
+}
+
+export async function getPageBySlug(): Promise<PayloadCollection<Page>> {
+  //ToDo: find by slug 
+  const data = await apiFetch(
+    `http://localhost:3001/api/pages`
   )
   return data
 }

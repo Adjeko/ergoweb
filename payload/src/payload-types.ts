@@ -25,21 +25,14 @@ export interface User {
 }
 export interface Page {
   id: string;
-  Name?: string;
-  Titel: string;
-  layout?: {
-    Titel: string;
-    Beschreibung?: string;
-    Buttons?: {
-      Text: string;
-      Link: string;
-      id?: string;
-      blockName?: string;
-      blockType: 'Button';
-    }[];
+  title: string;
+  slug: string;
+  content?: {
+    Text: string;
+    Link: string;
     id?: string;
     blockName?: string;
-    blockType: 'Hero';
+    blockType: 'Button';
   }[];
   createdAt: string;
   updatedAt: string;

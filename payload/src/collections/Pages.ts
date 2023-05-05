@@ -1,5 +1,5 @@
 import { CollectionConfig } from 'payload/types';
-import { HeroBlock } from '../blocks/HeroBlock';
+import { Button } from '../components/Button';
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -7,38 +7,40 @@ const Pages: CollectionConfig = {
     read: () => true,
   },
   admin: {
-    useAsTitle: 'Name',
+    useAsTitle: 'title',
   },
   fields: [
-    {
-      name: 'Name',
-      type: 'text',
-    },
     {
       type: 'tabs',
       tabs: [
         {
-          label: 'Seiten Infos',
+          label: 'Meta',
           description: 'Hier kommen allgemeine Infos zur Seite rein',
           fields: [
             {
-              name: 'Titel',
+              name: 'title',
+              label: 'Titel',
+              type: 'text',
+              required: true,
+            },
+            {
+              name: 'slug',
+              label: 'Url Pfad',
               type: 'text',
               required: true,
             }
           ],
         },
         {
-          label: 'Seiten Layout',
+          label: 'Inhalt',
           description: 'Hier kommen die Blöcke rein, also der Seiten Inhalt',
           fields: [
             {
-              name: 'layout',
+              name: 'content',
+              label: 'Inhalt',
               type: 'blocks',
-              minRows: 1,
-              maxRows: 20,
               blocks: [ 
-                HeroBlock
+                Button
               ]
             }
           ],
