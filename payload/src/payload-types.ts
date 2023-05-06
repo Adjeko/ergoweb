@@ -63,6 +63,27 @@ export interface Page {
         blockName?: string;
         blockType: 'Hero';
       }
+    | {
+        icon: string;
+        title: string;
+        text: string;
+        id?: string;
+        blockName?: string;
+        blockType: 'Card';
+      }
+    | {
+        cards?: {
+          icon: string;
+          title: string;
+          text: string;
+          id?: string;
+          blockName?: string;
+          blockType: 'Card';
+        }[];
+        id?: string;
+        blockName?: string;
+        blockType: 'Row';
+      }
   )[];
   createdAt: string;
   updatedAt: string;

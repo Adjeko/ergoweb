@@ -2,6 +2,8 @@ import { CollectionConfig } from 'payload/types';
 import { Button } from '../components/Button';
 import { Text } from '../components/Text';
 import { HeroBlock } from '../blocks/HeroBlock';
+import { Card } from '../components/Card';
+import { RowBlock } from '../blocks/RowBlock';
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -45,6 +47,8 @@ const Pages: CollectionConfig = {
                 Button,
                 Text,
                 HeroBlock,
+                Card,
+                RowBlock,
               ]
             }
           ],
