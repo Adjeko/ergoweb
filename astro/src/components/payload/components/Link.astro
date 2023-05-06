@@ -1,0 +1,16 @@
+---
+
+interface Props {
+  block: any,
+}
+
+const { block } = Astro.props;
+
+---
+
+<a
+  href={block.link}
+  class="text-gray-400 hover:text-gray-500"
+>
+  {block.text}
+</a>

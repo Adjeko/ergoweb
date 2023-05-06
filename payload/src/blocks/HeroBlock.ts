@@ -7,19 +7,20 @@ export const HeroBlock: Block = {
     // imageAltText: 'A nice thumbnail image to show what this block looks like',
     fields: [ // required
       {
-        name: 'Titel',
+        name: 'title',
+        label: 'Titel',
         type: 'text',
         required: true,
       },
       {
-        name: 'Beschreibung',
+        name: 'text',
+        label: 'Beschreibung',
         type: 'text',
       },
       {
-        name: 'Buttons',
+        name: 'buttons',
+        label: 'Buttons',
         type: 'blocks',
-        minRows: 1,
-        maxRows: 3,
         blocks: [ 
             Button
         ]

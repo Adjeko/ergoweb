@@ -49,6 +49,20 @@ export interface Page {
         blockName?: string;
         blockType: 'Text';
       }
+    | {
+        title: string;
+        text?: string;
+        buttons?: {
+          text: string;
+          link: string;
+          id?: string;
+          blockName?: string;
+          blockType: 'Button';
+        }[];
+        id?: string;
+        blockName?: string;
+        blockType: 'Hero';
+      }
   )[];
   createdAt: string;
   updatedAt: string;

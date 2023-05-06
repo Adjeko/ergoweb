@@ -6,12 +6,14 @@ export const Link: Block = {
     // imageAltText: 'A nice thumbnail image to show what this block looks like',
     fields: [ // required
       {
-        name: 'Text',
+        name: 'text',
+        label: 'Text',
         type: 'text',
         required: true,
       },
       {
-        name: 'Link',
+        name: 'link',
+        label: 'Link',
         type: 'text',
         required: true,
       },
